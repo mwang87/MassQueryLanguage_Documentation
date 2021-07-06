@@ -193,13 +193,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#try-it-out" class="md-nav__link">
-    Try it out
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#developers" class="md-nav__link">
     Developers
   </a>
@@ -395,6 +388,13 @@
           <li class="md-nav__item">
   <a href="#web-api" class="md-nav__link">
     Web API
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interactive-web-sandbox" class="md-nav__link">
+    Interactive Web Sandbox
   </a>
   
 </li>
@@ -442,13 +442,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#try-it-out" class="md-nav__link">
-    Try it out
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#developers" class="md-nav__link">
     Developers
   </a>
@@ -648,6 +641,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#interactive-web-sandbox" class="md-nav__link">
+    Interactive Web Sandbox
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -681,8 +681,6 @@ natural for mass spectrometry users. Broadly we attempt to design it according t
 <li>Precision - Exactly prescribe how to find data without ambiguity</li>
 <li>Relatively Natural - MSQL should be relatively easy to read and write and even use as a way to communicate ideas about mass spectrometry, you know like a language. </li>
 </ol>
-<h2 id="try-it-out">Try it out<a class="headerlink" href="#try-it-out" title="Permanent link">&para;</a></h2>
-<p>If you want to do a large scale query on your data, try our beta workflow <a href="https://proteomics2.ucsd.edu/ProteoSAFe/index.jsp?params=%7B%22workflow%22%3A%20%22MSQL-NF%22%7D">here</a>.</p>
 <h2 id="developers">Developers<a class="headerlink" href="#developers" title="Permanent link">&para;</a></h2>
 <p>Mingxun Wang is the creator and main developer of MSQL. Please contact me if you have questions! I'm hoping this becomes a community effort so reach out if you want to help/use MSQL. </p>
 <h2 id="definition-of-a-query">Definition of a Query<a class="headerlink" href="#definition-of-a-query" title="Permanent link">&para;</a></h2>
@@ -792,19 +790,21 @@ AND MS2PREC=X
 </code></pre></div></p>
 <h2 id="how-to-use-msql">How To Use MSQL<a class="headerlink" href="#how-to-use-msql" title="Permanent link">&para;</a></h2>
 <h3 id="python-api">Python API<a class="headerlink" href="#python-api" title="Permanent link">&para;</a></h3>
-<p>We have a python API that you can utilize in your own software</p>
+<p>We have a python API that you can utilize in your own software. </p>
 <h3 id="commandline-utility">Commandline Utility<a class="headerlink" href="#commandline-utility" title="Permanent link">&para;</a></h3>
 <p>We have a standalone script that can execute queries on single spectrum files. </p>
 <h3 id="nextflow-workflow">Nextflow Workflow<a class="headerlink" href="#nextflow-workflow" title="Permanent link">&para;</a></h3>
-<p>We have a nextflow workflow to enable scalable queries across hundreds of thousands of mass spectrometry files</p>
+<p>We have a nextflow workflow to enable scalable queries across hundreds of thousands of mass spectrometry files. </p>
 <h3 id="proteosafe-workflow">ProteoSAFe Workflow<a class="headerlink" href="#proteosafe-workflow" title="Permanent link">&para;</a></h3>
-<p>We have a proteosafe workflow that we have created that nicely integrates into GNPS. </p>
+<p>We have a proteosafe workflow that we have created that nicely integrates into GNPS - Try the beta <a href="https://proteomics2.ucsd.edu/ProteoSAFe/index.jsp?params=%7B%22workflow%22%3A%20%22MSQL-NF%22%7D">here</a>.</p>
 <h3 id="web-api">Web API<a class="headerlink" href="#web-api" title="Permanent link">&para;</a></h3>
 <p>We have built out a web API for people to use, especially for parsing. </p>
 <div class="highlight"><pre><span></span><code>https://msql.ucsd.edu/parse?query=QUERY%20MS2DATA%20WHERE%20MS1MZ=100
 </code></pre></div>
 
 <p>Simply put in the query as a url encoded parameter and a JSON representation of the parse is returned. </p>
+<h3 id="interactive-web-sandbox">Interactive Web Sandbox<a class="headerlink" href="#interactive-web-sandbox" title="Permanent link">&para;</a></h3>
+<p>Checkout the interactive sandbox <a href="https://msql.ucsd.edu/">here</a>.</p>
                 
                   
                     
@@ -813,7 +813,7 @@ AND MS2PREC=X
 <div class="md-source-date">
   <small>
     
-      Last update: July 6, 2021 18:39:57
+      Last update: July 6, 2021 18:42:59
     
   </small>
 </div>
