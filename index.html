@@ -1,0 +1,867 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.2.0">
+    
+    
+      
+        <title>MSQL Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.18ac144a.min.css">
+      
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+        
+<link rel="preconnect dns-prefetch" href="https://www.google-analytics.com">
+<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-8412213-5","ccms-ucsd.github.io"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}),document.addEventListener("DOMContentSwitch",function(){ga("send","pageview")})</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#what-is-mass-spec-query-language" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="." title="MSQL Documentation" class="md-header-nav__button md-logo" aria-label="MSQL Documentation">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            MSQL Documentation
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              MSQL Introduction
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="MSQL Documentation" class="md-nav__button md-logo" aria-label="MSQL Documentation">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    MSQL Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        MSQL Introduction
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="." title="MSQL Introduction" class="md-nav__link md-nav__link--active">
+      MSQL Introduction
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-mass-spec-query-language" class="md-nav__link">
+    What is Mass Spec Query Language
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#try-it-out" class="md-nav__link">
+    Try it out
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#developers" class="md-nav__link">
+    Developers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#definition-of-a-query" class="md-nav__link">
+    Definition of a Query
+  </a>
+  
+    <nav class="md-nav" aria-label="Definition of a Query">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#type-of-data" class="md-nav__link">
+    Type of Data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conditionals" class="md-nav__link">
+    Conditionals
+  </a>
+  
+    <nav class="md-nav" aria-label="Conditionals">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rtmin" class="md-nav__link">
+    RTMIN
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rtmax" class="md-nav__link">
+    RTMAX
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ms2prod" class="md-nav__link">
+    MS2PROD
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ms2prec" class="md-nav__link">
+    MS2PREC
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ms2nl" class="md-nav__link">
+    MS2NL
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qualifiers" class="md-nav__link">
+    Qualifiers
+  </a>
+  
+    <nav class="md-nav" aria-label="Qualifiers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mass-accuracy" class="md-nav__link">
+    Mass Accuracy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#intensity-relative-to-full-spectrum" class="md-nav__link">
+    Intensity Relative to Full Spectrum
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#intensity-relative-to-other-peaks" class="md-nav__link">
+    Intensity Relative to Other Peaks
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filters" class="md-nav__link">
+    Filters
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#xic-generation" class="md-nav__link">
+    XIC Generation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ms2-with-sugar-loss-neutral-loss-scan" class="md-nav__link">
+    MS2 With Sugar Loss - Neutral Loss Scan
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#brominated-compounds" class="md-nav__link">
+    Brominated Compounds
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ms2-with-distinct-fragments-precursor-ion-scan" class="md-nav__link">
+    MS2 with distinct fragment(s) - Precursor Ion Scan
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-use-msql" class="md-nav__link">
+    How To Use MSQL
+  </a>
+  
+    <nav class="md-nav" aria-label="How To Use MSQL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#python-api" class="md-nav__link">
+    Python API
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commandline-utility" class="md-nav__link">
+    Commandline Utility
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nextflow-workflow" class="md-nav__link">
+    Nextflow Workflow
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proteosafe-workflow" class="md-nav__link">
+    ProteoSAFe Workflow
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#web-api" class="md-nav__link">
+    Web API
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-mass-spec-query-language" class="md-nav__link">
+    What is Mass Spec Query Language
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#try-it-out" class="md-nav__link">
+    Try it out
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#developers" class="md-nav__link">
+    Developers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#definition-of-a-query" class="md-nav__link">
+    Definition of a Query
+  </a>
+  
+    <nav class="md-nav" aria-label="Definition of a Query">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#type-of-data" class="md-nav__link">
+    Type of Data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conditionals" class="md-nav__link">
+    Conditionals
+  </a>
+  
+    <nav class="md-nav" aria-label="Conditionals">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rtmin" class="md-nav__link">
+    RTMIN
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rtmax" class="md-nav__link">
+    RTMAX
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ms2prod" class="md-nav__link">
+    MS2PROD
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ms2prec" class="md-nav__link">
+    MS2PREC
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ms2nl" class="md-nav__link">
+    MS2NL
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qualifiers" class="md-nav__link">
+    Qualifiers
+  </a>
+  
+    <nav class="md-nav" aria-label="Qualifiers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mass-accuracy" class="md-nav__link">
+    Mass Accuracy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#intensity-relative-to-full-spectrum" class="md-nav__link">
+    Intensity Relative to Full Spectrum
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#intensity-relative-to-other-peaks" class="md-nav__link">
+    Intensity Relative to Other Peaks
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filters" class="md-nav__link">
+    Filters
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#xic-generation" class="md-nav__link">
+    XIC Generation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ms2-with-sugar-loss-neutral-loss-scan" class="md-nav__link">
+    MS2 With Sugar Loss - Neutral Loss Scan
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#brominated-compounds" class="md-nav__link">
+    Brominated Compounds
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ms2-with-distinct-fragments-precursor-ion-scan" class="md-nav__link">
+    MS2 with distinct fragment(s) - Precursor Ion Scan
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-use-msql" class="md-nav__link">
+    How To Use MSQL
+  </a>
+  
+    <nav class="md-nav" aria-label="How To Use MSQL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#python-api" class="md-nav__link">
+    Python API
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commandline-utility" class="md-nav__link">
+    Commandline Utility
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nextflow-workflow" class="md-nav__link">
+    Nextflow Workflow
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proteosafe-workflow" class="md-nav__link">
+    ProteoSAFe Workflow
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#web-api" class="md-nav__link">
+    Web API
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  
+                
+                
+                  <h1>MSQL Introduction</h1>
+                
+                <h2 id="what-is-mass-spec-query-language">What is Mass Spec Query Language<a class="headerlink" href="#what-is-mass-spec-query-language" title="Permanent link">&para;</a></h2>
+<p>The Mass Spec Query Langauge (MSQL) is a domain specific language meant to be a succinct way to 
+express a query in a mass spectrometry centric fashion. It is inspired by SQL, 
+but it attempts to bake in assumptions of mass spectrometry to make querying much more
+natural for mass spectrometry users. Broadly we attempt to design it according to several principles:</p>
+<ol>
+<li>Expressiveness - Capture complex mass spectrometry patterns that the community would like to look for</li>
+<li>Precision - Exactly prescribe how to find data without ambiguity</li>
+<li>Relatively Natural - MSQL should be relatively easy to read and write and even use as a way to communicate ideas about mass spectrometry, you know like a language. </li>
+</ol>
+<h2 id="try-it-out">Try it out<a class="headerlink" href="#try-it-out" title="Permanent link">&para;</a></h2>
+<p>If you want to do a large scale query on your data, try our beta workflow <a href="https://proteomics2.ucsd.edu/ProteoSAFe/index.jsp?params=%7B%22workflow%22%3A%20%22MSQL-NF%22%7D">here</a>.</p>
+<h2 id="developers">Developers<a class="headerlink" href="#developers" title="Permanent link">&para;</a></h2>
+<p>Mingxun Wang is the creator and main developer of MSQL. Please contact me if you have questions! I'm hoping this becomes a community effort so reach out if you want to help/use MSQL. </p>
+<h2 id="definition-of-a-query">Definition of a Query<a class="headerlink" href="#definition-of-a-query" title="Permanent link">&para;</a></h2>
+<p>There are several parts</p>
+<div class="highlight"><pre><span></span><code>QUERY
+&lt;Type of Data&gt;
+WHERE
+&lt;Condition&gt;
+AND
+&lt;Condition&gt;
+FILTER
+&lt;Filter&gt;
+AND
+&lt;Filter&gt;
+</code></pre></div>
+
+<h3 id="type-of-data">Type of Data<a class="headerlink" href="#type-of-data" title="Permanent link">&para;</a></h3>
+<p>This determines the type of data you want to get. At its most fundamental level, its the peaks
+for either </p>
+<ol>
+<li>MS1DATA</li>
+<li>MS2DATA</li>
+</ol>
+<p>Further, there are functions that can modify this data</p>
+<ol>
+<li>scansum</li>
+<li>scanrangesum</li>
+<li>scanmaxint</li>
+<li>scanmaxmz</li>
+<li>scannum</li>
+<li>scanrun</li>
+<li>scaninfo</li>
+</ol>
+<h3 id="conditionals">Conditionals<a class="headerlink" href="#conditionals" title="Permanent link">&para;</a></h3>
+<p>These are conditions to filter for scans of interest (by looking for peaks and sets of peaks) within the mass spectrometry data. You can create clauses, 
+which are specific conditions and the associated qualifiers. You may further combine multiple conditions with AND operators. </p>
+<p>The types of conditions are as follows</p>
+<h4 id="rtmin">RTMIN<a class="headerlink" href="#rtmin" title="Permanent link">&para;</a></h4>
+<p>Setting the minimum retention time in minutes</p>
+<h4 id="rtmax">RTMAX<a class="headerlink" href="#rtmax" title="Permanent link">&para;</a></h4>
+<p>Setting the maximum retention time in minutes</p>
+<h4 id="ms2prod">MS2PROD<a class="headerlink" href="#ms2prod" title="Permanent link">&para;</a></h4>
+<p>Looking for an MS2 peak</p>
+<h4 id="ms2prec">MS2PREC<a class="headerlink" href="#ms2prec" title="Permanent link">&para;</a></h4>
+<p>Looking for an MS2 precursor m/z</p>
+<h4 id="ms2nl">MS2NL<a class="headerlink" href="#ms2nl" title="Permanent link">&para;</a></h4>
+<p>Looking for a neutral loss from precursor in the MS2 spectrum</p>
+<h3 id="qualifiers">Qualifiers<a class="headerlink" href="#qualifiers" title="Permanent link">&para;</a></h3>
+<p>These can be attached to conditions to modify some properties about the peaks we are looking for. </p>
+<h4 id="mass-accuracy">Mass Accuracy<a class="headerlink" href="#mass-accuracy" title="Permanent link">&para;</a></h4>
+<p>These two fields enable setting a peak m/z tolerance</p>
+<div class="highlight"><pre><span></span><code>TOLERANCEMZ=0.1
+TOLERANCEPPM=50
+</code></pre></div>
+
+<h4 id="intensity-relative-to-full-spectrum">Intensity Relative to Full Spectrum<a class="headerlink" href="#intensity-relative-to-full-spectrum" title="Permanent link">&para;</a></h4>
+<p>These two fields enable to set an minimum intensity</p>
+<div class="highlight"><pre><span></span><code>INTENSITYVALUE=1000
+INTENSITYPERCENT=10
+</code></pre></div>
+
+<h4 id="intensity-relative-to-other-peaks">Intensity Relative to Other Peaks<a class="headerlink" href="#intensity-relative-to-other-peaks" title="Permanent link">&para;</a></h4>
+<p>Here we can start imposing relative intensities between peaks</p>
+<div class="highlight"><pre><span></span><code>INTENSITYMATCHREFERENCE
+INTENSITYMATCH=Y
+INTENSITYMATCH=Y*2
+INTENSITYMATCHPERCENT=10
+</code></pre></div>
+
+<div class="admonition info">
+<p class="admonition-title">Intensity Matching Between Peaks</p>
+<p>This is actually complicated, but you'll end up with one peak per variable that is the reference
+and all others are relative to that reference. 
+<div class="highlight"><pre><span></span><code>WHERE 
+MS1MZ=X:INTENSITYMATCH=Y:INTENSITYMATCHREFERENCE 
+AND 
+MS1MZ=X+2:INTENSITYMATCH=Y*2:INTENSITYMATCHPERCENT=1 
+</code></pre></div></p>
+</div>
+<h3 id="filters">Filters<a class="headerlink" href="#filters" title="Permanent link">&para;</a></h3>
+<p>Filters are like conditional but we don't elimate scans based on the condition. Rather, we simply filter out peaks within the spectra. </p>
+<p>This is useful for things like SRM or SIM/XIC. </p>
+<h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
+<h3 id="xic-generation">XIC Generation<a class="headerlink" href="#xic-generation" title="Permanent link">&para;</a></h3>
+<p>MS1 XIC, m/z = 100</p>
+<div class="highlight"><pre><span></span><code>QUERY scansum(MS1DATA) FILTER MS1MZ=100:TOLERANCEMZ=0.1
+</code></pre></div>
+
+<h3 id="ms2-with-sugar-loss-neutral-loss-scan">MS2 With Sugar Loss - Neutral Loss Scan<a class="headerlink" href="#ms2-with-sugar-loss-neutral-loss-scan" title="Permanent link">&para;</a></h3>
+<p>Neutral Loss, 163 Da</p>
+<div class="highlight"><pre><span></span><code>QUERY scannum(MS2DATA) WHERE MS2NL=163
+</code></pre></div>
+
+<h3 id="brominated-compounds">Brominated Compounds<a class="headerlink" href="#brominated-compounds" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>QUERY scaninfo(MS2DATA) WHERE 
+MS1MZ=X:INTENSITYMATCH=Y:INTENSITYMATCHREFERENCE 
+AND MS1MZ=X+2:INTENSITYMATCH=Y:INTENSITYMATCHPERCENT=5
+AND MS2PREC=X
+</code></pre></div>
+
+<h3 id="ms2-with-distinct-fragments-precursor-ion-scan">MS2 with distinct fragment(s) - Precursor Ion Scan<a class="headerlink" href="#ms2-with-distinct-fragments-precursor-ion-scan" title="Permanent link">&para;</a></h3>
+<p>One Product Ion, m/z = 660.2
+<div class="highlight"><pre><span></span><code>QUERY scaninfo(MS2DATA) WHERE MS2PROD=660.2:TOLERANCEMZ=0.1
+</code></pre></div></p>
+<p>Two Product Ions, m/z = 660.2 and 468.2
+<div class="highlight"><pre><span></span><code>QUERY scaninfo(MS2DATA) WHERE MS2PROD=660.2:TOLERANCEMZ=0.1 AND MS2PROD=468.2:TOLERANCEMZ=0.1
+</code></pre></div></p>
+<h2 id="how-to-use-msql">How To Use MSQL<a class="headerlink" href="#how-to-use-msql" title="Permanent link">&para;</a></h2>
+<h3 id="python-api">Python API<a class="headerlink" href="#python-api" title="Permanent link">&para;</a></h3>
+<p>We have a python API that you can utilize in your own software</p>
+<h3 id="commandline-utility">Commandline Utility<a class="headerlink" href="#commandline-utility" title="Permanent link">&para;</a></h3>
+<p>We have a standalone script that can execute queries on single spectrum files. </p>
+<h3 id="nextflow-workflow">Nextflow Workflow<a class="headerlink" href="#nextflow-workflow" title="Permanent link">&para;</a></h3>
+<p>We have a nextflow workflow to enable scalable queries across hundreds of thousands of mass spectrometry files</p>
+<h3 id="proteosafe-workflow">ProteoSAFe Workflow<a class="headerlink" href="#proteosafe-workflow" title="Permanent link">&para;</a></h3>
+<p>We have a proteosafe workflow that we have created that nicely integrates into GNPS. </p>
+<h3 id="web-api">Web API<a class="headerlink" href="#web-api" title="Permanent link">&para;</a></h3>
+<p>We have built out a web API for people to use, especially for parsing. </p>
+<div class="highlight"><pre><span></span><code>https://msql.ucsd.edu/parse?query=QUERY%20MS2DATA%20WHERE%20MS1MZ=100
+</code></pre></div>
+
+<p>Simply put in the query as a url encoded parameter and a JSON representation of the parse is returned. </p>
+                
+                  
+                    
+
+<hr>
+<div class="md-source-date">
+  <small>
+    
+      Last update: July 6, 2021 18:39:57
+    
+  </small>
+</div>
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="assets/javascripts/vendor.d710d30a.min.js"></script>
+      <script src="assets/javascripts/bundle.5f27aba8.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: ".",
+          features: [],
+          search: Object.assign({
+            worker: "assets/javascripts/worker/search.27c6a5e6.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>
