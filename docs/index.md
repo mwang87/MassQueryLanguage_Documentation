@@ -11,10 +11,6 @@ natural for mass spectrometry users. Broadly we attempt to design it according t
 1. Precision - Exactly prescribe how to find data without ambiguity
 1. Relatively Natural - MSQL should be relatively easy to read and write and even use as a way to communicate ideas about mass spectrometry, you know like a language. 
 
-## Try it out
-
-If you want to do a large scale query on your data, try our beta workflow [here](https://proteomics2.ucsd.edu/ProteoSAFe/index.jsp?params=%7B%22workflow%22%3A%20%22MSQL-NF%22%7D).
-
 ## Developers
 
 Mingxun Wang is the creator and main developer of MSQL. Please contact me if you have questions! I'm hoping this becomes a community effort so reach out if you want to help/use MSQL. 
@@ -173,7 +169,7 @@ QUERY scaninfo(MS2DATA) WHERE MS2PROD=660.2:TOLERANCEMZ=0.1 AND MS2PROD=468.2:TO
 
 ### Python API
 
-We have a python API that you can utilize in your own software
+We have a python API that you can utilize in your own software. 
 
 ### Commandline Utility
 
@@ -181,11 +177,11 @@ We have a standalone script that can execute queries on single spectrum files.
 
 ### Nextflow Workflow
 
-We have a nextflow workflow to enable scalable queries across hundreds of thousands of mass spectrometry files
+We have a nextflow workflow to enable scalable queries across hundreds of thousands of mass spectrometry files. 
 
 ### ProteoSAFe Workflow
 
-We have a proteosafe workflow that we have created that nicely integrates into GNPS. 
+We have a proteosafe workflow that we have created that nicely integrates into GNPS - Try the beta [here](https://proteomics2.ucsd.edu/ProteoSAFe/index.jsp?params=%7B%22workflow%22%3A%20%22MSQL-NF%22%7D).
 
 ### Web API
 
@@ -196,3 +192,7 @@ https://msql.ucsd.edu/parse?query=QUERY%20MS2DATA%20WHERE%20MS1MZ=100
 ```
 
 Simply put in the query as a url encoded parameter and a JSON representation of the parse is returned. 
+
+### Interactive Web Sandbox
+
+Checkout the interactive sandbox [here](https://msql.ucsd.edu/).
