@@ -1,6 +1,3 @@
-
-![logo](docs/img/GNPS_logo_original.png)
-
 # MSQL Documentation GitHub Repository
 
 ## Contributing to the New Documentation
