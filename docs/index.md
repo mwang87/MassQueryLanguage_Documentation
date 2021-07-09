@@ -43,7 +43,7 @@ for either
 Further, there are functions that can modify this data
 
 1. scaninfo - This provides likely the most information you'd want for each scan
-1. scansum
+1. scansum - Summation of the scan
 1. scannum - Returns the scan number 
 
 
