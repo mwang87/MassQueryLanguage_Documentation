@@ -42,13 +42,16 @@ for either
 
 Further, there are functions that can modify this data
 
+1. scaninfo - This provides likely the most information you'd want for each scan
 1. scansum
-1. scanrangesum
-1. scanmaxint
-1. scanmaxmz
-1. scannum
-1. scanrun
-1. scaninfo
+
+!!! info "Experimental Functions"
+    1. scanrangesum
+    1. scanmaxint
+    1. scanmaxmz
+    1. scannum
+    1. scanrun
+
 
 ### Conditionals
 
