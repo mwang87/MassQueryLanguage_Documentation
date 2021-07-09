@@ -44,12 +44,13 @@ Further, there are functions that can modify this data
 
 1. scaninfo - This provides likely the most information you'd want for each scan
 1. scansum
+1. scannum - Returns the scan number 
+
 
 !!! info "Experimental Functions"
     1. scanrangesum
     1. scanmaxint
     1. scanmaxmz
-    1. scannum
     1. scanrun
 
 
@@ -145,7 +146,7 @@ QUERY scansum(MS1DATA) FILTER MS1MZ=100:TOLERANCEMZ=0.1
 Neutral Loss, 163 Da
 
 ```
-QUERY scannum(MS2DATA) WHERE MS2NL=163
+QUERY scaninfo(MS2DATA) WHERE MS2NL=163
 ```
 
 ### Brominated Compounds
