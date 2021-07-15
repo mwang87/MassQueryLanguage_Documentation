@@ -68,6 +68,22 @@ Setting the minimum retention time in minutes
 
 Setting the maximum retention time in minutes
 
+#### SCANMIN
+
+Setting the minimum scan number (this is inclusive)
+
+#### SCANMAX
+
+Setting the maximum scan number (this is inclusive)
+
+#### CHARGE
+
+Finding MS2 spectra with a given charge if reported by the instrument
+
+#### POLARITY
+
+The polarity that will be chosen. (Positive, Negative)
+
 #### MS2PROD
 
 Looking for an MS2 peak
