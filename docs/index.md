@@ -2,7 +2,7 @@
 
 ## What is Mass Spec Query Language
 
-The Mass Spec Query Langauge (MSQL) is a domain specific language meant to be a succinct way to 
+The Mass Spec Query Langauge (MassQL) is a domain specific language meant to be a succinct way to 
 express a query in a mass spectrometry centric fashion. It is inspired by SQL, 
 but it attempts to bake in assumptions of mass spectrometry to make querying much more
 natural for mass spectrometry users. Broadly we attempt to design it according to several principles:
