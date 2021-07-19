@@ -116,7 +116,12 @@ These two fields enable to set an minimum intensity
 ```
 INTENSITYVALUE=1000
 INTENSITYPERCENT=10
+INTENSITYTICPERCENT=10
 ```
+
+INTENSITYVALUE - This indicates a minimum intensity value in terms of arbitrary units.
+INTENSITYPERCENT - This indicates a minimum percent of maximum peak in the spectrum.
+INTENSITYTICPERCENT - This indicates a minimum percent of total TIC in the spectra. 
 
 #### Intensity Relative to Other Peaks
 
