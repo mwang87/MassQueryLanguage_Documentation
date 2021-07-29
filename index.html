@@ -378,11 +378,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-to-use-msql" class="md-nav__link">
-    How To Use MSQL
+  <a href="#how-to-use-massql" class="md-nav__link">
+    How To Use MassQL
   </a>
   
-    <nav class="md-nav" aria-label="How To Use MSQL">
+    <nav class="md-nav" aria-label="How To Use MassQL">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -410,6 +410,19 @@
   <a href="#proteosafe-workflow" class="md-nav__link">
     ProteoSAFe Workflow
   </a>
+  
+    <nav class="md-nav" aria-label="ProteoSAFe Workflow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#workflow-details" class="md-nav__link">
+    Workflow Details
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -655,11 +668,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-to-use-msql" class="md-nav__link">
-    How To Use MSQL
+  <a href="#how-to-use-massql" class="md-nav__link">
+    How To Use MassQL
   </a>
   
-    <nav class="md-nav" aria-label="How To Use MSQL">
+    <nav class="md-nav" aria-label="How To Use MassQL">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -687,6 +700,19 @@
   <a href="#proteosafe-workflow" class="md-nav__link">
     ProteoSAFe Workflow
   </a>
+  
+    <nav class="md-nav" aria-label="ProteoSAFe Workflow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#workflow-details" class="md-nav__link">
+    Workflow Details
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -735,10 +761,10 @@ natural for mass spectrometry users. Broadly we attempt to design it according t
 <ol>
 <li>Expressiveness - Capture complex mass spectrometry patterns that the community would like to look for</li>
 <li>Precision - Exactly prescribe how to find data without ambiguity</li>
-<li>Relatively Natural - MSQL should be relatively easy to read and write and even use as a way to communicate ideas about mass spectrometry, you know like a language. </li>
+<li>Relatively Natural - MassQL should be relatively easy to read and write and even use as a way to communicate ideas about mass spectrometry, you know like a language. </li>
 </ol>
 <h2 id="developers">Developers<a class="headerlink" href="#developers" title="Permanent link">&para;</a></h2>
-<p>Mingxun Wang is the creator and main developer of MSQL. Please contact me if you have questions! I'm hoping this becomes a community effort so reach out if you want to help/use MSQL. </p>
+<p>Mingxun Wang is the creator and main developer of MassQL. Please contact me if you have questions! I'm hoping this becomes a community effort so reach out if you want to help/use MassQL. </p>
 <h2 id="definition-of-a-query">Definition of a Query<a class="headerlink" href="#definition-of-a-query" title="Permanent link">&para;</a></h2>
 <p>There are several parts</p>
 <div class="highlight"><pre><span></span><code>QUERY
@@ -861,7 +887,7 @@ AND MS2PREC=X
 <p>Two Product Ions, m/z = 660.2 and 468.2
 <div class="highlight"><pre><span></span><code>QUERY scaninfo(MS2DATA) WHERE MS2PROD=660.2:TOLERANCEMZ=0.1 AND MS2PROD=468.2:TOLERANCEMZ=0.1
 </code></pre></div></p>
-<h2 id="how-to-use-msql">How To Use MSQL<a class="headerlink" href="#how-to-use-msql" title="Permanent link">&para;</a></h2>
+<h2 id="how-to-use-massql">How To Use MassQL<a class="headerlink" href="#how-to-use-massql" title="Permanent link">&para;</a></h2>
 <h3 id="python-api">Python API<a class="headerlink" href="#python-api" title="Permanent link">&para;</a></h3>
 <p>We have a python API that you can utilize in your own software. </p>
 <h3 id="commandline-utility">Commandline Utility<a class="headerlink" href="#commandline-utility" title="Permanent link">&para;</a></h3>
@@ -870,6 +896,12 @@ AND MS2PREC=X
 <p>We have a nextflow workflow to enable scalable queries across hundreds of thousands of mass spectrometry files. </p>
 <h3 id="proteosafe-workflow">ProteoSAFe Workflow<a class="headerlink" href="#proteosafe-workflow" title="Permanent link">&para;</a></h3>
 <p>We have a proteosafe workflow that we have created that nicely integrates into GNPS - Try the beta <a href="https://proteomics2.ucsd.edu/ProteoSAFe/index.jsp?params=%7B%22workflow%22%3A%20%22MSQL-NF%22%7D">here</a>.</p>
+<h4 id="workflow-details">Workflow Details<a class="headerlink" href="#workflow-details" title="Permanent link">&para;</a></h4>
+<p>There are several options that you probably will care about</p>
+<ol>
+<li>Extracting found MS scans as part of output, default this is off, if you want to do downstream molecular networking - turn this on</li>
+<li>If you want to run multiple queries together, you can now, just separate your queries with <code>|||</code> and then results from multiple queries will be merged together</li>
+</ol>
 <h3 id="web-api">Web API<a class="headerlink" href="#web-api" title="Permanent link">&para;</a></h3>
 <p>We have built out a web API for people to use, especially for parsing. </p>
 <div class="highlight"><pre><span></span><code>https://msql.ucsd.edu/parse?query=QUERY%20MS2DATA%20WHERE%20MS1MZ=100
@@ -886,7 +918,7 @@ AND MS2PREC=X
 <div class="md-source-date">
   <small>
     
-      Last update: July 19, 2021 22:21:46
+      Last update: July 29, 2021 21:04:06
     
   </small>
 </div>
