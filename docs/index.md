@@ -228,4 +228,8 @@ Simply put in the query as a url encoded parameter and a JSON representation of 
 
 ### Interactive Web Sandbox
 
-Checkout the interactive sandbox [here](https://msql.ucsd.edu/).
+Checkout the interactive sandbox [here](https://msql.ucsd.edu/). 
+
+## Debugging Your Query
+
+I would recommend you check out the interactive sandbox listed above. One of the features here is we try to translate your MassQL query into a visualization and into English. Generally issues with queries run into problems with of misunderstanding what each condition and qualifier mean or setting your requirements a bit too strict. Both the visualization and translation to English helps with that. 
