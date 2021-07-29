@@ -9,11 +9,11 @@ natural for mass spectrometry users. Broadly we attempt to design it according t
 
 1. Expressiveness - Capture complex mass spectrometry patterns that the community would like to look for
 1. Precision - Exactly prescribe how to find data without ambiguity
-1. Relatively Natural - MSQL should be relatively easy to read and write and even use as a way to communicate ideas about mass spectrometry, you know like a language. 
+1. Relatively Natural - MassQL should be relatively easy to read and write and even use as a way to communicate ideas about mass spectrometry, you know like a language. 
 
 ## Developers
 
-Mingxun Wang is the creator and main developer of MSQL. Please contact me if you have questions! I'm hoping this becomes a community effort so reach out if you want to help/use MSQL. 
+Mingxun Wang is the creator and main developer of MassQL. Please contact me if you have questions! I'm hoping this becomes a community effort so reach out if you want to help/use MassQL. 
 
 ## Definition of a Query
 
@@ -190,7 +190,7 @@ Two Product Ions, m/z = 660.2 and 468.2
 QUERY scaninfo(MS2DATA) WHERE MS2PROD=660.2:TOLERANCEMZ=0.1 AND MS2PROD=468.2:TOLERANCEMZ=0.1
 ```
 
-## How To Use MSQL
+## How To Use MassQL
 
 ### Python API
 
@@ -207,6 +207,14 @@ We have a nextflow workflow to enable scalable queries across hundreds of thousa
 ### ProteoSAFe Workflow
 
 We have a proteosafe workflow that we have created that nicely integrates into GNPS - Try the beta [here](https://proteomics2.ucsd.edu/ProteoSAFe/index.jsp?params=%7B%22workflow%22%3A%20%22MSQL-NF%22%7D).
+
+#### Workflow Details
+
+There are several options that you probably will care about
+
+1. Extracting found MS scans as part of output, default this is off, if you want to do downstream molecular networking - turn this on
+1. If you want to run multiple queries together, you can now, just separate your queries with ```|||``` and then results from multiple queries will be merged together
+
 
 ### Web API
 
