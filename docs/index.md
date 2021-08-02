@@ -151,6 +151,10 @@ Filters are like conditional but we don't elimate scans based on the condition. 
 
 This is useful for things like SRM or SIM/XIC. 
 
+## MassQL Patterns
+
+If you're interested in doing some more advanced queries in MassQL, we have a dedicated patterns page to show you 
+ways we've approached some interesting applications. By no means is it comprehensive, but we hope it helps. Check it out [patterns.md](here).
 
 ## Examples
 

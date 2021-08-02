@@ -1,7 +1,8 @@
 site_name: MSQL Documentation
 
 nav:
-    - MSQL Introduction: index.md
+    - MassQL Introduction: index.md
+    - MassQL Patterns: patterns.md
 theme:
     name: material
 
