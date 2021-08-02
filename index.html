@@ -81,7 +81,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              MSQL Introduction
+              MassQL Introduction
             
           </span>
         </div>
@@ -162,14 +162,14 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        MSQL Introduction
+        MassQL Introduction
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
         </span>
       </label>
     
-    <a href="." title="MSQL Introduction" class="md-nav__link md-nav__link--active">
-      MSQL Introduction
+    <a href="." title="MassQL Introduction" class="md-nav__link md-nav__link--active">
+      MassQL Introduction
     </a>
     
       
@@ -337,6 +337,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#massql-patterns" class="md-nav__link">
+    MassQL Patterns
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#examples" class="md-nav__link">
     Examples
   </a>
@@ -456,6 +463,18 @@
   
 </nav>
     
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="patterns/" title="MassQL Patterns" class="md-nav__link">
+      MassQL Patterns
+    </a>
   </li>
 
     
@@ -634,6 +653,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#massql-patterns" class="md-nav__link">
+    MassQL Patterns
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#examples" class="md-nav__link">
     Examples
   </a>
@@ -765,7 +791,7 @@
                   
                 
                 
-                  <h1>MSQL Introduction</h1>
+                  <h1>MassQL Introduction</h1>
                 
                 <h2 id="what-is-mass-spec-query-language">What is Mass Spec Query Language<a class="headerlink" href="#what-is-mass-spec-query-language" title="Permanent link">&para;</a></h2>
 <p>The Mass Spec Query Langauge (MassQL) is a domain specific language meant to be a succinct way to 
@@ -876,6 +902,9 @@ MS1MZ=X+2:INTENSITYMATCH=Y*2:INTENSITYMATCHPERCENT=1
 <h3 id="filters">Filters<a class="headerlink" href="#filters" title="Permanent link">&para;</a></h3>
 <p>Filters are like conditional but we don't elimate scans based on the condition. Rather, we simply filter out peaks within the spectra. </p>
 <p>This is useful for things like SRM or SIM/XIC. </p>
+<h2 id="massql-patterns">MassQL Patterns<a class="headerlink" href="#massql-patterns" title="Permanent link">&para;</a></h2>
+<p>If you're interested in doing some more advanced queries in MassQL, we have a dedicated patterns page to show you 
+ways we've approached some interesting applications. By no means is it comprehensive, but we hope it helps. Check it out <a href="here">patterns.md</a>.</p>
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
 <h3 id="xic-generation">XIC Generation<a class="headerlink" href="#xic-generation" title="Permanent link">&para;</a></h3>
 <p>MS1 XIC, m/z = 100</p>
@@ -934,7 +963,7 @@ AND MS2PREC=X
 <div class="md-source-date">
   <small>
     
-      Last update: July 29, 2021 21:06:43
+      Last update: August 2, 2021 19:47:03
     
   </small>
 </div>
@@ -953,6 +982,27 @@ AND MS2PREC=X
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+        
+          <a href="patterns/" title="MassQL Patterns" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                MassQL Patterns
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
