@@ -59,6 +59,9 @@ Further, there are functions that can modify this data
 These are conditions to filter for scans of interest (by looking for peaks and sets of peaks) within the mass spectrometry data. You can create clauses, 
 which are specific conditions and the associated qualifiers. You may further combine multiple conditions with AND operators. 
 
+!!! info
+    The syntax for this is ```<condition>=<value>```, e.g. ```MS2PROD=144.1```.
+
 The types of conditions are as follows
 
 #### RTMIN
@@ -139,10 +142,83 @@ INTENSITYMATCHPERCENT=10
     and all others are relative to that reference. 
     ```
     WHERE 
-    MS1MZ=X:INTENSITYMATCH=Y:INTENSITYMATCHREFERENCE 
+    MS1MZ=X:INTENSITYMATCH=Y:INTENSITYMATCHREFERENCE # This is the reference peak which all other peaks' intensities will be compared to
     AND 
-    MS1MZ=X+2:INTENSITYMATCH=Y*2:INTENSITYMATCHPERCENT=1 
+    MS1MZ=X+2:INTENSITYMATCH=Y*2:INTENSITYMATCHPERCENT=1 # The Y*2 denotes that it must be 2 times the intensity of the first peak
     ```
+
+### Values of Conditions, Qualifiers
+
+As mentioned above, the value of certain conditions can be numbers (more precisely floats). However, its sometimes in convenient to have to actually calculate out the m/z for an MS2PROD condition and also the derivation is obfuscated if its just a single number. You can simply list it out as a numerical expression
+
+```
+MS2PROD=100+14
+```
+
+and this will get calculated to mean
+
+```
+MS2PROD=114
+```
+
+You can even do more advanced things that are native to chemistry/biochemistry without having to look up numbers, and they are listed below
+
+#### Molecular Formula
+
+To save us all a little bit of time convert lookup of formulas into masses, you can use the syntax:
+
+```
+MS2PROD=formula(H2O)
+```
+
+to easily calcualte the mono isotopic mass of H2O. It will substitute as
+
+```
+MS2PROD=18.01056468403
+```
+
+!!! info "Advanced Usage"
+    If you want to make functions out of formula masses, you totally can, like below
+
+    ```
+    MS2PROD=100 + formula(CH2)*2
+    ```
+
+#### Amino Acid Masses
+
+To calculate amino acid masses, you can use the following syntax
+
+```
+MS2PROD=100 + aminoaciddelta(G)
+```
+
+which will calculate out to 
+
+```
+MS2PROD=157.02146372057
+```
+
+!!! note "Multiple Amino Acids"
+    If you want to use multiple amino acids, no problem:
+
+    ```
+    MS2PROD=aminoaciddelta(GA)
+    ```
+
+#### Peptide Masses
+
+If you're in the proteomics camp, you can automatically calculate peptide fragementation. 
+
+```
+MS2PROD=peptide(G, charge=1, ion=y)
+```
+
+will yield
+
+```
+MS2PROD=76.03930487103999
+```
+
 
 
 ### Filters
