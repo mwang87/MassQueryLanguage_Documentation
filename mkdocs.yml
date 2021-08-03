@@ -3,6 +3,7 @@ site_name: MSQL Documentation
 nav:
     - MassQL Introduction: index.md
     - MassQL Patterns: patterns.md
+    - MassQL GNPS Workflow: gnps.md
 theme:
     name: material
 
