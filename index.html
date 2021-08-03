@@ -325,6 +325,40 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#values-of-conditions-qualifiers" class="md-nav__link">
+    Values of Conditions, Qualifiers
+  </a>
+  
+    <nav class="md-nav" aria-label="Values of Conditions, Qualifiers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#molecular-formula" class="md-nav__link">
+    Molecular Formula
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#amino-acid-masses" class="md-nav__link">
+    Amino Acid Masses
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#peptide-masses" class="md-nav__link">
+    Peptide Masses
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#filters" class="md-nav__link">
     Filters
   </a>
@@ -474,6 +508,18 @@
   <li class="md-nav__item">
     <a href="patterns/" title="MassQL Patterns" class="md-nav__link">
       MassQL Patterns
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="gnps/" title="MassQL GNPS Workflow" class="md-nav__link">
+      MassQL GNPS Workflow
     </a>
   </li>
 
@@ -631,6 +677,40 @@
           <li class="md-nav__item">
   <a href="#intensity-relative-to-other-peaks" class="md-nav__link">
     Intensity Relative to Other Peaks
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#values-of-conditions-qualifiers" class="md-nav__link">
+    Values of Conditions, Qualifiers
+  </a>
+  
+    <nav class="md-nav" aria-label="Values of Conditions, Qualifiers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#molecular-formula" class="md-nav__link">
+    Molecular Formula
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#amino-acid-masses" class="md-nav__link">
+    Amino Acid Masses
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#peptide-masses" class="md-nav__link">
+    Peptide Masses
   </a>
   
 </li>
@@ -844,6 +924,10 @@ for either </p>
 <h3 id="conditionals">Conditionals<a class="headerlink" href="#conditionals" title="Permanent link">&para;</a></h3>
 <p>These are conditions to filter for scans of interest (by looking for peaks and sets of peaks) within the mass spectrometry data. You can create clauses, 
 which are specific conditions and the associated qualifiers. You may further combine multiple conditions with AND operators. </p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>The syntax for this is <code>&lt;condition&gt;=&lt;value&gt;</code>, e.g. <code>MS2PROD=144.1</code>.</p>
+</div>
 <p>The types of conditions are as follows</p>
 <h4 id="rtmin">RTMIN<a class="headerlink" href="#rtmin" title="Permanent link">&para;</a></h4>
 <p>Setting the minimum retention time in minutes</p>
@@ -894,11 +978,62 @@ INTENSITYMATCHPERCENT=10
 <p>This is actually complicated, but you'll end up with one peak per variable that is the reference
 and all others are relative to that reference. 
 <div class="highlight"><pre><span></span><code>WHERE 
-MS1MZ=X:INTENSITYMATCH=Y:INTENSITYMATCHREFERENCE 
+MS1MZ=X:INTENSITYMATCH=Y:INTENSITYMATCHREFERENCE # This is the reference peak which all other peaks&#39; intensities will be compared to
 AND 
-MS1MZ=X+2:INTENSITYMATCH=Y*2:INTENSITYMATCHPERCENT=1 
+MS1MZ=X+2:INTENSITYMATCH=Y*2:INTENSITYMATCHPERCENT=1 # The Y*2 denotes that it must be 2 times the intensity of the first peak
 </code></pre></div></p>
 </div>
+<h3 id="values-of-conditions-qualifiers">Values of Conditions, Qualifiers<a class="headerlink" href="#values-of-conditions-qualifiers" title="Permanent link">&para;</a></h3>
+<p>As mentioned above, the value of certain conditions can be numbers (more precisely floats). However, its sometimes in convenient to have to actually calculate out the m/z for an MS2PROD condition and also the derivation is obfuscated if its just a single number. You can simply list it out as a numerical expression</p>
+<div class="highlight"><pre><span></span><code>MS2PROD=100+14
+</code></pre></div>
+
+<p>and this will get calculated to mean</p>
+<div class="highlight"><pre><span></span><code>MS2PROD=114
+</code></pre></div>
+
+<p>You can even do more advanced things that are native to chemistry/biochemistry without having to look up numbers, and they are listed below</p>
+<h4 id="molecular-formula">Molecular Formula<a class="headerlink" href="#molecular-formula" title="Permanent link">&para;</a></h4>
+<p>To save us all a little bit of time convert lookup of formulas into masses, you can use the syntax:</p>
+<div class="highlight"><pre><span></span><code>MS2PROD=formula(H2O)
+</code></pre></div>
+
+<p>to easily calcualte the mono isotopic mass of H2O. It will substitute as</p>
+<div class="highlight"><pre><span></span><code>MS2PROD=18.01056468403
+</code></pre></div>
+
+<div class="admonition info">
+<p class="admonition-title">Advanced Usage</p>
+<p>If you want to make functions out of formula masses, you totally can, like below</p>
+<div class="highlight"><pre><span></span><code>MS2PROD=100 + formula(CH2)*2
+</code></pre></div>
+
+</div>
+<h4 id="amino-acid-masses">Amino Acid Masses<a class="headerlink" href="#amino-acid-masses" title="Permanent link">&para;</a></h4>
+<p>To calculate amino acid masses, you can use the following syntax</p>
+<div class="highlight"><pre><span></span><code>MS2PROD=100 + aminoaciddelta(G)
+</code></pre></div>
+
+<p>which will calculate out to </p>
+<div class="highlight"><pre><span></span><code>MS2PROD=157.02146372057
+</code></pre></div>
+
+<div class="admonition note">
+<p class="admonition-title">Multiple Amino Acids</p>
+<p>If you want to use multiple amino acids, no problem:</p>
+<div class="highlight"><pre><span></span><code>MS2PROD=aminoaciddelta(GA)
+</code></pre></div>
+
+</div>
+<h4 id="peptide-masses">Peptide Masses<a class="headerlink" href="#peptide-masses" title="Permanent link">&para;</a></h4>
+<p>If you're in the proteomics camp, you can automatically calculate peptide fragementation. </p>
+<div class="highlight"><pre><span></span><code>MS2PROD=peptide(G, charge=1, ion=y)
+</code></pre></div>
+
+<p>will yield</p>
+<div class="highlight"><pre><span></span><code>MS2PROD=76.03930487103999
+</code></pre></div>
+
 <h3 id="filters">Filters<a class="headerlink" href="#filters" title="Permanent link">&para;</a></h3>
 <p>Filters are like conditional but we don't elimate scans based on the condition. Rather, we simply filter out peaks within the spectra. </p>
 <p>This is useful for things like SRM or SIM/XIC. </p>
@@ -963,7 +1098,7 @@ AND MS2PREC=X
 <div class="md-source-date">
   <small>
     
-      Last update: August 2, 2021 19:47:03
+      Last update: August 3, 2021 04:12:01
     
   </small>
 </div>

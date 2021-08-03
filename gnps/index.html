@@ -15,7 +15,7 @@
     
     
       
-        <title>MassQL Patterns - MSQL Documentation</title>
+        <title>MassQL GNPS Workflow - MSQL Documentation</title>
       
     
     
@@ -53,7 +53,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ms2-spectra-with-a-given-ms1-isotopic-pattern" class="md-skip">
+        <a href="#gnps-massql-workflow" class="md-skip">
           Skip to content
         </a>
       
@@ -81,7 +81,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              MassQL Patterns
+              MassQL GNPS Workflow
             
           </span>
         </div>
@@ -165,6 +165,18 @@
       
       
 
+
+  <li class="md-nav__item">
+    <a href="../patterns/" title="MassQL Patterns" class="md-nav__link">
+      MassQL Patterns
+    </a>
+  </li>
+
+    
+      
+      
+      
+
   
 
 
@@ -174,14 +186,14 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        MassQL Patterns
+        MassQL GNPS Workflow
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
         </span>
       </label>
     
-    <a href="./" title="MassQL Patterns" class="md-nav__link md-nav__link--active">
-      MassQL Patterns
+    <a href="./" title="MassQL GNPS Workflow" class="md-nav__link md-nav__link--active">
+      MassQL GNPS Workflow
     </a>
     
       
@@ -198,9 +210,56 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#ms2-spectra-with-a-given-ms1-isotopic-pattern" class="md-nav__link">
-    MS2 spectra with a given MS1 isotopic pattern
+  <a href="#gnps-massql-workflow" class="md-nav__link">
+    GNPS MassQL Workflow
   </a>
+  
+    <nav class="md-nav" aria-label="GNPS MassQL Workflow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#linkouts" class="md-nav__link">
+    Linkouts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extraction" class="md-nav__link">
+    Extraction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#molecular-networking" class="md-nav__link">
+    Molecular Networking
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#iron-siderophore" class="md-nav__link">
+    Iron Siderophore
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -208,18 +267,6 @@
   
 </nav>
     
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../gnps/" title="MassQL GNPS Workflow" class="md-nav__link">
-      MassQL GNPS Workflow
-    </a>
   </li>
 
     
@@ -247,9 +294,56 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#ms2-spectra-with-a-given-ms1-isotopic-pattern" class="md-nav__link">
-    MS2 spectra with a given MS1 isotopic pattern
+  <a href="#gnps-massql-workflow" class="md-nav__link">
+    GNPS MassQL Workflow
   </a>
+  
+    <nav class="md-nav" aria-label="GNPS MassQL Workflow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#linkouts" class="md-nav__link">
+    Linkouts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extraction" class="md-nav__link">
+    Extraction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#molecular-networking" class="md-nav__link">
+    Molecular Networking
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#iron-siderophore" class="md-nav__link">
+    Iron Siderophore
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -269,22 +363,19 @@
                   
                 
                 
-                  <h1>MassQL Patterns</h1>
+                  <h1>MassQL GNPS Workflow</h1>
                 
-                <p>This page includes common patterns that you might want to query for in mass spec data</p>
-<h3 id="ms2-spectra-with-a-given-ms1-isotopic-pattern">MS2 spectra with a given MS1 isotopic pattern<a class="headerlink" href="#ms2-spectra-with-a-given-ms1-isotopic-pattern" title="Permanent link">&para;</a></h3>
-<p>If you're looking for molecules with an isotopic pattern and want to get the MS2 spectra associated with it, we have a pretty easy way to do this. </p>
-<p>Since you're looking for a variable m/z denoted as X, once you find it, simply enforce the MS2 precursor m/z to also be X.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This will cause isotopic patterns that lack MS2 to be dropped</p>
-</div>
-<p>Here is a quick example of a query</p>
-<div class="highlight"><pre><span></span><code>QUERY scaninfo(MS2DATA) WHERE 
-MS1MZ=X AND 
-MS1MZ=X+1 AND 
-MS2PREC=X
-</code></pre></div>
+                <h2 id="gnps-massql-workflow">GNPS MassQL Workflow<a class="headerlink" href="#gnps-massql-workflow" title="Permanent link">&para;</a></h2>
+<p>You can execute your MassQL queries against your own data or public data at GNPS in a highthroughput fashion. Whether its one file or 150K, its possible at GNPS. </p>
+<h3 id="linkouts">Linkouts<a class="headerlink" href="#linkouts" title="Permanent link">&para;</a></h3>
+<p>Lorem Ipsum</p>
+<h3 id="extraction">Extraction<a class="headerlink" href="#extraction" title="Permanent link">&para;</a></h3>
+<p>Lorem Ipsum</p>
+<h3 id="molecular-networking">Molecular Networking<a class="headerlink" href="#molecular-networking" title="Permanent link">&para;</a></h3>
+<p>Lorem Ipsum</p>
+<h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
+<h3 id="iron-siderophore">Iron Siderophore<a class="headerlink" href="#iron-siderophore" title="Permanent link">&para;</a></h3>
+<p><a href="https://proteomics2.ucsd.edu/ProteoSAFe/status.jsp?task=d3dad0ccc388442bb2a6a7d2beb28293">Link</a></p>
                 
                   
                     
@@ -293,7 +384,7 @@ MS2PREC=X
 <div class="md-source-date">
   <small>
     
-      Last update: August 2, 2021 19:47:03
+      Last update: August 3, 2021 04:14:00
     
   </small>
 </div>
@@ -316,7 +407,7 @@ MS2PREC=X
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href=".." title="MassQL Introduction" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../patterns/" title="MassQL Patterns" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -325,25 +416,11 @@ MS2PREC=X
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                MassQL Introduction
+                MassQL Patterns
               </div>
             </div>
           </a>
         
-        
-          <a href="../gnps/" title="MassQL GNPS Workflow" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                MassQL GNPS Workflow
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
         
       </nav>
     </div>
