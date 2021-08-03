@@ -3,6 +3,15 @@
 You can execute your MassQL queries against your own data or public data at GNPS in a highthroughput fashion. Whether its one file or 150K, its possible at GNPS. 
 
 
+### Input Parameters
+
+1. Query
+1. Spectrum Files
+1. Paralleize within a single file - ignore this
+1. Parallelize Across All Files - To increase a little bit of speed if you have multiple files, turn to Yes
+1. Extract Found MS Spectra - if you want to extract the found MS spectra for networking
+1. Parallelize across the Cluster - admin only
+
 ### Linkouts
 
 Lorem Ipsum
