@@ -12,6 +12,13 @@ You can execute your MassQL queries against your own data or public data at GNPS
 1. Extract Found MS Spectra - if you want to extract the found MS spectra for networking
 1. Parallelize across the Cluster - admin only
 
+### Query
+
+Enter your query in this field. You can simply paste one in or write it here. 
+
+!!! note "Multiple Queries"
+    If you want to run multiple queries you can separate each query with ```|||``` and all results are merged together
+
 ### Linkouts
 
 Lorem Ipsum
@@ -28,6 +35,9 @@ Lorem Ipsum
 
 Lorem Ipsum
 
+### Trouble Shooting
+
+If you don't get any results, go ahead and check the "Workflow Trace" to make sure its not all failed. 
 
 ## Examples
 
