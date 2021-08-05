@@ -15,7 +15,7 @@
     
     
       
-        <title>MassQL Patterns - MSQL Documentation</title>
+        <title>MassQL Query Visualizer - MSQL Documentation</title>
       
     
     
@@ -53,7 +53,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ms2-spectra-with-a-given-ms1-isotopic-pattern" class="md-skip">
+        <a href="#ms-peak-mass" class="md-skip">
           Skip to content
         </a>
       
@@ -81,7 +81,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              MassQL Patterns
+              MassQL Query Visualizer
             
           </span>
         </div>
@@ -165,49 +165,11 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        MassQL Patterns
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
-        </span>
-      </label>
-    
-    <a href="./" title="MassQL Patterns" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../patterns/" title="MassQL Patterns" class="md-nav__link">
       MassQL Patterns
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-      </span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#ms2-spectra-with-a-given-ms1-isotopic-pattern" class="md-nav__link">
-    MS2 spectra with a given MS1 isotopic pattern
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
     
@@ -227,11 +189,84 @@
       
       
 
+  
 
-  <li class="md-nav__item">
-    <a href="../visualizer/" title="MassQL Query Visualizer" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        MassQL Query Visualizer
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="MassQL Query Visualizer" class="md-nav__link md-nav__link--active">
       MassQL Query Visualizer
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ms-peak-mass" class="md-nav__link">
+    MS Peak Mass
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ms2-neutral-loss" class="md-nav__link">
+    MS2 Neutral Loss
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#peak-intensity-minimum" class="md-nav__link">
+    Peak Intensity Minimum
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#peak-intensity-match" class="md-nav__link">
+    Peak Intensity Match
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variables" class="md-nav__link">
+    Variables
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overlaying-real-data" class="md-nav__link">
+    Overlaying Real Data
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
     
@@ -259,8 +294,43 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#ms2-spectra-with-a-given-ms1-isotopic-pattern" class="md-nav__link">
-    MS2 spectra with a given MS1 isotopic pattern
+  <a href="#ms-peak-mass" class="md-nav__link">
+    MS Peak Mass
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ms2-neutral-loss" class="md-nav__link">
+    MS2 Neutral Loss
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#peak-intensity-minimum" class="md-nav__link">
+    Peak Intensity Minimum
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#peak-intensity-match" class="md-nav__link">
+    Peak Intensity Match
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variables" class="md-nav__link">
+    Variables
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overlaying-real-data" class="md-nav__link">
+    Overlaying Real Data
   </a>
   
 </li>
@@ -281,22 +351,22 @@
                   
                 
                 
-                  <h1>MassQL Patterns</h1>
+                  <h1>MassQL Query Visualizer</h1>
                 
-                <p>This page includes common patterns that you might want to query for in mass spec data</p>
-<h3 id="ms2-spectra-with-a-given-ms1-isotopic-pattern">MS2 spectra with a given MS1 isotopic pattern<a class="headerlink" href="#ms2-spectra-with-a-given-ms1-isotopic-pattern" title="Permanent link">&para;</a></h3>
-<p>If you're looking for molecules with an isotopic pattern and want to get the MS2 spectra associated with it, we have a pretty easy way to do this. </p>
-<p>Since you're looking for a variable m/z denoted as X, once you find it, simply enforce the MS2 precursor m/z to also be X.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This will cause isotopic patterns that lack MS2 to be dropped</p>
-</div>
-<p>Here is a quick example of a query</p>
-<div class="highlight"><pre><span></span><code>QUERY scaninfo(MS2DATA) WHERE 
-MS1MZ=X AND 
-MS1MZ=X+1 AND 
-MS2PREC=X
-</code></pre></div>
+                <p>MassQL has a visualizer to help you figure out what your query is looking for. It is available at our <a href="https://msql.ucsd.edu/">sandbox</a>. </p>
+<p>The following will describe but the shapes and symbols mean</p>
+<h2 id="ms-peak-mass">MS Peak Mass<a class="headerlink" href="#ms-peak-mass" title="Permanent link">&para;</a></h2>
+<p>This can be either MS2PROD or MS1MZ, green boxes around where the allowble m/z tolerance determined by qualifiers is set. </p>
+<h2 id="ms2-neutral-loss">MS2 Neutral Loss<a class="headerlink" href="#ms2-neutral-loss" title="Permanent link">&para;</a></h2>
+<p>Lorem Ipsum</p>
+<h2 id="peak-intensity-minimum">Peak Intensity Minimum<a class="headerlink" href="#peak-intensity-minimum" title="Permanent link">&para;</a></h2>
+<p>This is a red dashed line</p>
+<h2 id="peak-intensity-match">Peak Intensity Match<a class="headerlink" href="#peak-intensity-match" title="Permanent link">&para;</a></h2>
+<p>The ranges are purple dashed lines</p>
+<h2 id="variables">Variables<a class="headerlink" href="#variables" title="Permanent link">&para;</a></h2>
+<p>You can set the variables you want with Value X and Value Y</p>
+<h2 id="overlaying-real-data">Overlaying Real Data<a class="headerlink" href="#overlaying-real-data" title="Permanent link">&para;</a></h2>
+<p>If you enter the USI for the MS1 or MS2 spectra, you can overlay your query with an actual spectrum to workshop what you're trying to find. </p>
                 
                   
                     
@@ -305,7 +375,7 @@ MS2PREC=X
 <div class="md-source-date">
   <small>
     
-      Last update: August 2, 2021 19:47:03
+      Last update: August 5, 2021 20:05:17
     
   </small>
 </div>
@@ -328,7 +398,7 @@ MS2PREC=X
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href=".." title="MassQL Introduction" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../gnps/" title="MassQL GNPS Workflow" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -337,25 +407,11 @@ MS2PREC=X
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                MassQL Introduction
-              </div>
-            </div>
-          </a>
-        
-        
-          <a href="../gnps/" title="MassQL GNPS Workflow" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
                 MassQL GNPS Workflow
               </div>
             </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
           </a>
+        
         
       </nav>
     </div>
