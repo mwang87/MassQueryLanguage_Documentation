@@ -4,6 +4,7 @@ nav:
     - MassQL Introduction: index.md
     - MassQL Patterns: patterns.md
     - MassQL GNPS Workflow: gnps.md
+    - MassQL Query Visualizer: visualizer.md
 theme:
     name: material
 
