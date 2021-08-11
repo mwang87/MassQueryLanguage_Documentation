@@ -1,4 +1,4 @@
-# MSQL Documentation GitHub Repository
+# MassQL Documentation GitHub Repository
 
 ## Contributing to the New Documentation
 
