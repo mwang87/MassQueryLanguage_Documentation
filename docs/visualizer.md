@@ -12,11 +12,11 @@ Lorem Ipsum
 
 ## Peak Intensity Minimum
 
-This is a red dashed line
+This is a red dashed line, with a small red arrow indicating it is a minimum. 
 
 ## Peak Intensity Match
 
-The ranges are purple dashed lines
+The ranges are purple dashed lines with arrows denoting the included rage. 
 
 ## Variables
 
