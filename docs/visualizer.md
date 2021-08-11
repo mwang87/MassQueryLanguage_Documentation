@@ -8,7 +8,7 @@ This can be either MS2PROD or MS1MZ, green boxes around where the allowble m/z t
 
 ## MS2 Neutral Loss
 
-Lorem Ipsum
+These are MS2NL keywords and are shown as red boxes. 
 
 ## Peak Intensity Minimum
 
