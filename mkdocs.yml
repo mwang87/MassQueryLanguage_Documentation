@@ -1,4 +1,4 @@
-site_name: MSQL Documentation
+site_name: MassQL Documentation
 
 nav:
     - MassQL Introduction: index.md
