@@ -8,15 +8,15 @@ This can be either MS2PROD or MS1MZ, green boxes around where the allowble m/z t
 
 ## MS2 Neutral Loss
 
-Lorem Ipsum
+These are MS2NL keywords and are shown as red boxes. 
 
 ## Peak Intensity Minimum
 
-This is a red dashed line
+This is a red dashed line, with a small red arrow indicating it is a minimum. 
 
 ## Peak Intensity Match
 
-The ranges are purple dashed lines
+The ranges are purple dashed lines with arrows denoting the included rage. 
 
 ## Variables
 
