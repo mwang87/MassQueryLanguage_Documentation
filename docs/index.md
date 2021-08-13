@@ -163,6 +163,17 @@ MS2PROD=114
 
 You can even do more advanced things that are native to chemistry/biochemistry without having to look up numbers, and they are listed below
 
+#### Variables
+
+In cases where you do not know the mass of the peaks for a specific pattern, but you know the pattern of peaks relative to each other, e.g. isotopic patterns, you can use the variable X in place. For example:
+
+```
+QUERY scaninfo(MS2DATA) WHERE MS2PROD=X and MS2NL=X+16
+```
+
+!!! note "Limiting Range of X"
+    If you want to limit the range you can set another condition, ```X=range(min=100, max=500)```
+
 #### Molecular Formula
 
 To save us all a little bit of time convert lookup of formulas into masses, you can use the syntax:
