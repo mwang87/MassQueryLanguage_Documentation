@@ -2,7 +2,7 @@ This page includes common patterns that you might want to query for in mass spec
 
 ---
 
-# Query Mass Spectrometry Data
+## Query Mass Spectrometry Data
 
 ### MS1 precursor ion/s based on monoisotopic mass with absolute mass error
 Finding MS1 peak at m/z 256.1696 with a 0.01 m/z tolerance.
@@ -69,7 +69,7 @@ MS2PROD=167.0857:TOLERANCEPPM=5
 
 ---
 
-# Query Liquid/Gas Chromatography - Mass Spectrometry Data
+## Query Liquid/Gas Chromatography - Mass Spectrometry Data
 
 ### Total ion chromatogram
 Returning the summed scan information on MS1.
