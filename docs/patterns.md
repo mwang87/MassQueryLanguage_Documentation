@@ -51,7 +51,7 @@ QUERY scaninfo(MS2DATA) WHERE
 MS2PROD=167.0857:TOLERANCEPPM=5
 ```
 
-### MS2 spectrum with multiple product ions with relative mass error
+### MS2 spectrum with a neutral loss and product ion with relative mass error
 Finding MS2 neutral loss peak at m/z 176.0321.<br>
 Finding MS2 peak at m/z 85.02915 a 5.0 PPM tolerance.
 ```
