@@ -167,8 +167,14 @@ You can even do more advanced things that are native to chemistry/biochemistry w
 
 In cases where you do not know the mass of the peaks for a specific pattern, but you know the pattern of peaks relative to each other, e.g. isotopic patterns, you can use the variable X in place. For example:
 
+Search for a product ion X and a second ion that is the water loss (-18) of X. (The difference to MS2NL=18 is that this command searches for any two signal with this m/z difference)
 ```
-QUERY scaninfo(MS2DATA) WHERE MS2PROD=X and MS2NL=X+16
+QUERY scaninfo(MS2DATA) WHERE MS2PROD=X and MS2PROD=X-18
+```
+
+Different conditions can be combined with variables. Here a product ion X should also be detected as a neutral loss.
+```
+QUERY scaninfo(MS2DATA) WHERE MS2PROD=X and MS2NL=X
 ```
 
 !!! note "Limiting Range of X"
