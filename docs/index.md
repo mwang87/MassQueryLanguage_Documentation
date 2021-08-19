@@ -161,7 +161,10 @@ and this will get calculated to mean
 MS2PROD=114
 ```
 
-You can even do more advanced things that are native to chemistry/biochemistry without having to look up numbers, and they are listed below
+You can even do more advanced things that are native to chemistry/biochemistry without having to look up numbers, and they are listed below. 
+
+!!! note "MS2MZ and MS2PROD synonyms"
+    MS2MZ and MS2PROD mean the same thing in the language. 
 
 #### Variables
 
