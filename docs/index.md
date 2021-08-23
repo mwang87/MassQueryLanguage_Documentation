@@ -177,6 +177,9 @@ QUERY scaninfo(MS2DATA) WHERE MS2PROD=X and MS2NL=X+16
 !!! note "Limiting Range of X"
     If you want to limit the range you can set another condition, ```X=range(min=100, max=500)```
 
+!!! note "Limiting Mass Defect of X"
+    If you want to set limits on the decimal part of X, you can set another condition, ```X=defect(min=0.1, max=0.5)```
+
 #### Molecular Formula
 
 To save us all a little bit of time convert lookup of formulas into masses, you can use the syntax:
