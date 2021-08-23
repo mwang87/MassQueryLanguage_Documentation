@@ -1064,6 +1064,10 @@ MS1MZ=X+2:INTENSITYMATCH=Y*2:INTENSITYMATCHPERCENT=1 # The Y*2 denotes that it m
 <p class="admonition-title">Limiting Range of X</p>
 <p>If you want to limit the range you can set another condition, <code>X=range(min=100, max=500)</code></p>
 </div>
+<div class="admonition note">
+<p class="admonition-title">Limiting Mass Defect of X</p>
+<p>If you want to set limits on the decimal part of X, you can set another condition, <code>X=defect(min=0.1, max=0.5)</code></p>
+</div>
 <h4 id="molecular-formula">Molecular Formula<a class="headerlink" href="#molecular-formula" title="Permanent link">&para;</a></h4>
 <p>To save us all a little bit of time convert lookup of formulas into masses, you can use the syntax:</p>
 <div class="highlight"><pre><span></span><code>MS2PROD=formula(H2O)
@@ -1169,7 +1173,7 @@ AND MS2PREC=X
 <div class="md-source-date">
   <small>
     
-      Last update: August 19, 2021 19:22:27
+      Last update: August 23, 2021 23:21:18
     
   </small>
 </div>
