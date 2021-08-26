@@ -400,6 +400,26 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#misc" class="md-nav__link">
+    Misc
+  </a>
+  
+    <nav class="md-nav" aria-label="Misc">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#or-operations" class="md-nav__link">
+    OR operations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -781,6 +801,26 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#misc" class="md-nav__link">
+    Misc
+  </a>
+  
+    <nav class="md-nav" aria-label="Misc">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#or-operations" class="md-nav__link">
+    OR operations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1112,6 +1152,13 @@ MS1MZ=X+2:INTENSITYMATCH=Y*2:INTENSITYMATCHPERCENT=1 # The Y*2 denotes that it m
 <h3 id="filters">Filters<a class="headerlink" href="#filters" title="Permanent link">&para;</a></h3>
 <p>Filters are like conditional but we don't elimate scans based on the condition. Rather, we simply filter out peaks within the spectra. </p>
 <p>This is useful for things like SRM or SIM/XIC. </p>
+<h3 id="misc">Misc<a class="headerlink" href="#misc" title="Permanent link">&para;</a></h3>
+<h4 id="or-operations">OR operations<a class="headerlink" href="#or-operations" title="Permanent link">&para;</a></h4>
+<p>If you are looking for two peaks but either of them could be present, you can use the following syntax</p>
+<div class="highlight"><pre><span></span><code>MS2PROD=(100 OR 104)
+</code></pre></div>
+
+<p>You can use with variables as well. </p>
 <h2 id="massql-patterns">MassQL Patterns<a class="headerlink" href="#massql-patterns" title="Permanent link">&para;</a></h2>
 <p>If you're interested in doing some more advanced queries in MassQL, we have a dedicated patterns page to show you 
 ways we've approached some interesting applications. By no means is it comprehensive, but we hope it helps. Check it out <a href="patterns/">here</a>.</p>
@@ -1173,7 +1220,7 @@ AND MS2PREC=X
 <div class="md-source-date">
   <small>
     
-      Last update: August 23, 2021 23:21:18
+      Last update: August 26, 2021 23:18:02
     
   </small>
 </div>
