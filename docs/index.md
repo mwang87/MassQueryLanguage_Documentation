@@ -237,12 +237,23 @@ MS2PROD=76.03930487103999
 ```
 
 
-
 ### Filters
 
 Filters are like conditional but we don't elimate scans based on the condition. Rather, we simply filter out peaks within the spectra. 
 
 This is useful for things like SRM or SIM/XIC. 
+
+### Misc
+
+#### OR operations
+
+If you are looking for two peaks but either of them could be present, you can use the following syntax
+
+```
+MS2PROD=(100 OR 104)
+```
+
+You can use with variables as well. 
 
 ## MassQL Patterns
 
