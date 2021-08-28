@@ -106,6 +106,15 @@ MOBILITY=range(min=1, max=2)
 
 The units here are whatever your mass spectrometer reports and are not converted to collision cross section (CCS). 
 
+!!! note "Fun with m/z variables and Mobility"
+    You can even create polygons within the m/z mobility space to get data. Here is a quick example
+    ```
+    QUERY scaninfo(MS2DATA) WHERE MS2PREC=X AND MOBILITY=range(min=X*0.0011+0.5-0.1, max=X*0.0011+0.5+0.1)
+    ```
+    This represents approximately this parallelogram region. 
+
+    ![](img/mobility_query1.png)
+
 #### MS2NL
 
 Looking for a neutral loss from precursor in the MS2 spectrum

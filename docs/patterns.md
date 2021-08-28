@@ -103,3 +103,10 @@ MS1MZ=X+1 AND
 MS2PREC=X
 ```
 
+### Dynamic Shapes With Mobility
+
+If you're looking for certain mobility of molecules that is dependent upon the m/z of the molecule, you can start including variables in the mobility range function. 
+
+```
+QUERY scaninfo(MS2DATA) WHERE MS2PREC=X AND MOBILITY=range(min=X*0.0011+0.5-0.1, max=X*0.0011+0.5+0.1
+```
