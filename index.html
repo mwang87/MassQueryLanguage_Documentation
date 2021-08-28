@@ -1063,6 +1063,14 @@ which are specific conditions and the associated qualifiers. You may further com
 </code></pre></div>
 
 <p>The units here are whatever your mass spectrometer reports and are not converted to collision cross section (CCS). </p>
+<div class="admonition note">
+<p class="admonition-title">Fun with m/z variables and Mobility</p>
+<p>You can even create polygons within the m/z mobility space to get data. Here is a quick example
+<div class="highlight"><pre><span></span><code>QUERY scaninfo(MS2DATA) WHERE MS2PREC=X AND MOBILITY=range(min=X*0.0011+0.5-0.1, max=X*0.0011+0.5+0.1)
+</code></pre></div>
+This represents approximately this parallelogram region. </p>
+<p><img alt="" src="img/mobility_query1.png" /></p>
+</div>
 <h4 id="ms2nl">MS2NL<a class="headerlink" href="#ms2nl" title="Permanent link">&para;</a></h4>
 <p>Looking for a neutral loss from precursor in the MS2 spectrum</p>
 <h3 id="qualifiers">Qualifiers<a class="headerlink" href="#qualifiers" title="Permanent link">&para;</a></h3>
@@ -1240,7 +1248,7 @@ AND MS2PREC=X
 <div class="md-source-date">
   <small>
     
-      Last update: August 28, 2021 21:16:31
+      Last update: August 28, 2021 22:52:14
     
   </small>
 </div>
