@@ -307,6 +307,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#mobility" class="md-nav__link">
+    MOBILITY
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#ms2nl" class="md-nav__link">
     MS2NL
   </a>
@@ -708,6 +715,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#mobility" class="md-nav__link">
+    MOBILITY
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#ms2nl" class="md-nav__link">
     MS2NL
   </a>
@@ -1043,6 +1057,12 @@ which are specific conditions and the associated qualifiers. You may further com
 <p>Looking for an MS2 peak</p>
 <h4 id="ms2prec">MS2PREC<a class="headerlink" href="#ms2prec" title="Permanent link">&para;</a></h4>
 <p>Looking for an MS2 precursor m/z</p>
+<h4 id="mobility">MOBILITY<a class="headerlink" href="#mobility" title="Permanent link">&para;</a></h4>
+<p>We have a special keyword to interact with mobility data. Specifically, the syntax enables you to set min and max bounds for the mobility</p>
+<div class="highlight"><pre><span></span><code>MOBILITY=range(min=1, max=2)
+</code></pre></div>
+
+<p>The units here are whatever your mass spectrometer reports and are not converted to collision cross section (CCS). </p>
 <h4 id="ms2nl">MS2NL<a class="headerlink" href="#ms2nl" title="Permanent link">&para;</a></h4>
 <p>Looking for a neutral loss from precursor in the MS2 spectrum</p>
 <h3 id="qualifiers">Qualifiers<a class="headerlink" href="#qualifiers" title="Permanent link">&para;</a></h3>
@@ -1189,9 +1209,9 @@ AND MS2PREC=X
 </code></pre></div></p>
 <h2 id="how-to-use-massql">How To Use MassQL<a class="headerlink" href="#how-to-use-massql" title="Permanent link">&para;</a></h2>
 <h3 id="python-api">Python API<a class="headerlink" href="#python-api" title="Permanent link">&para;</a></h3>
-<p>We have a python API that you can utilize in your own software. </p>
+<p>We have a python API that you can utilize in your own software. Checkout the package here on <a href="https://pypi.org/project/massql/">PyPi</a>.</p>
 <h3 id="commandline-utility">Commandline Utility<a class="headerlink" href="#commandline-utility" title="Permanent link">&para;</a></h3>
-<p>We have a standalone script that can execute queries on single spectrum files. </p>
+<p>We have a standalone script that can execute queries on spectrum files that can be installed by the package <a href="https://pypi.org/project/massql/">PyPi</a>.</p>
 <h3 id="nextflow-workflow">Nextflow Workflow<a class="headerlink" href="#nextflow-workflow" title="Permanent link">&para;</a></h3>
 <p>We have a nextflow workflow to enable scalable queries across hundreds of thousands of mass spectrometry files. </p>
 <h3 id="proteosafe-workflow">ProteoSAFe Workflow<a class="headerlink" href="#proteosafe-workflow" title="Permanent link">&para;</a></h3>
@@ -1220,7 +1240,7 @@ AND MS2PREC=X
 <div class="md-source-date">
   <small>
     
-      Last update: August 26, 2021 23:18:02
+      Last update: August 28, 2021 21:16:31
     
   </small>
 </div>
