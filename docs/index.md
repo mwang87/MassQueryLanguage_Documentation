@@ -95,6 +95,17 @@ Looking for an MS2 peak
 
 Looking for an MS2 precursor m/z
 
+
+#### MOBILITY
+
+We have a special keyword to interact with mobility data. Specifically, the syntax enables you to set min and max bounds for the mobility
+
+```
+MOBILITY=range(min=1, max=2)
+```
+
+The units here are whatever your mass spectrometer reports and are not converted to collision cross section (CCS). 
+
 #### MS2NL
 
 Looking for a neutral loss from precursor in the MS2 spectrum
@@ -302,11 +313,11 @@ QUERY scaninfo(MS2DATA) WHERE MS2PROD=660.2:TOLERANCEMZ=0.1 AND MS2PROD=468.2:TO
 
 ### Python API
 
-We have a python API that you can utilize in your own software. 
+We have a python API that you can utilize in your own software. Checkout the package here on [PyPi](https://pypi.org/project/massql/).
 
 ### Commandline Utility
 
-We have a standalone script that can execute queries on single spectrum files. 
+We have a standalone script that can execute queries on spectrum files that can be installed by the package [PyPi](https://pypi.org/project/massql/).
 
 ### Nextflow Workflow
 
