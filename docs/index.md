@@ -324,6 +324,10 @@ QUERY scaninfo(MS2DATA) WHERE MS2PROD=660.2:TOLERANCEMZ=0.1 AND MS2PROD=468.2:TO
 
 We have a python API that you can utilize in your own software. Checkout the package here on [PyPi](https://pypi.org/project/massql/).
 
+## R API
+
+We have an R implementation by the community, check it out [here](https://github.com/rformassspectrometry/SpectraQL).
+
 ### Commandline Utility
 
 We have a standalone script that can execute queries on spectrum files that can be installed by the package [PyPi](https://pypi.org/project/massql/).
