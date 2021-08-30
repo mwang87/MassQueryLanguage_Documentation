@@ -132,6 +132,9 @@ TOLERANCEMZ=0.1
 TOLERANCEPPM=50
 ```
 
+!!! note "Default Values"
+    The default tolerance when no qualifier is provided is 0.1 Da.
+
 #### Intensity Relative to Full Spectrum
 
 These two fields enable to set an minimum intensity
