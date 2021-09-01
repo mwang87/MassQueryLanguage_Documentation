@@ -95,6 +95,10 @@ Looking for an MS2 peak
 
 Looking for an MS2 precursor m/z
 
+#### MS1MZ
+
+Looking for MS1 peak m/z
+
 
 #### MOBILITY
 
