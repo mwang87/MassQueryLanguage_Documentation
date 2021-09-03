@@ -347,6 +347,7 @@ We have a nextflow workflow to enable scalable queries across hundreds of thousa
 
 We have a proteosafe workflow that we have created that nicely integrates into GNPS - Try the beta [here](https://proteomics2.ucsd.edu/ProteoSAFe/index.jsp?params=%7B%22workflow%22%3A%20%22MSQL-NF%22%7D).
 
+
 #### Workflow Details
 
 There are several options that you probably will care about
@@ -354,6 +355,12 @@ There are several options that you probably will care about
 1. Extracting found MS scans as part of output, default this is off, if you want to do downstream molecular networking - turn this on
 1. If you want to run multiple queries together, you can now, just separate your queries with ```|||``` and then results from multiple queries will be merged together
 
+
+!!! note "GNPS Repository Scale Queries"
+    One of the powerful things with MassQL is the ability to scale up to huge amounts of data. Luckily at GNPS we have tons of data. You can use the above workflow to 
+    select datasets (or your own), with hundreds of files queriable at once. However, sometimes you want to go really big and search everything at once. We have these
+    tools available but they currently require a large amount of compute and require special permissions. If you want to do repository scale queries, please contact Ming
+    to collaborate on it. 
 
 ### Web API
 
