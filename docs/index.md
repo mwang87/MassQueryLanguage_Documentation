@@ -153,6 +153,9 @@ INTENSITYVALUE - This indicates a minimum intensity value in terms of arbitrary 
 INTENSITYPERCENT - This indicates a minimum percent of maximum peak in the spectrum.
 INTENSITYTICPERCENT - This indicates a minimum percent of total TIC in the spectra. 
 
+!!! note "Default Values"
+    The default minimum intensity value is 0, so it will accept any peak. This is generally not what you want, so likely you do want to set this. 
+
 #### Intensity Relative to Other Peaks
 
 Here we can start imposing relative intensities between peaks
