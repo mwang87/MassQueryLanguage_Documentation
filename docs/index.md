@@ -196,6 +196,17 @@ You can even do more advanced things that are native to chemistry/biochemistry w
 !!! note "MS2MZ and MS2PROD synonyms"
     MS2MZ and MS2PROD mean the same thing in the language. 
 
+#### ANY keyword
+
+If you do not have a specific requirement of a peak m/z, you can use the ANY keyword. 
+
+For example:
+
+```
+MS2PROD=ANY:MASSDEFECT=massdefect(min=0.1, max=0.2)
+```
+
+
 #### Variables
 
 In cases where you do not know the mass of the peaks for a specific pattern, but you know the pattern of peaks relative to each other, e.g. isotopic patterns, you can use the variable X in place. For example:
@@ -208,7 +219,7 @@ QUERY scaninfo(MS2DATA) WHERE MS2PROD=X and MS2NL=X+16
     If you want to limit the range you can set another condition, ```X=range(min=100, max=500)```
 
 !!! note "Limiting Mass Defect of X"
-    If you want to set limits on the decimal part of X, you can set another condition, ```X=defect(min=0.1, max=0.5)```
+    If you want to set limits on the decimal part of X, you can set another condition, ```X=massdefect(min=0.1, max=0.5)```
 
 #### Molecular Formula
 
