@@ -24,4 +24,6 @@ You can set the variables you want with Value X and Value Y
 
 ## Overlaying Real Data
 
-If you enter the USI for the MS1 or MS2 spectra, you can overlay your query with an actual spectrum to workshop what you're trying to find. 
+If you enter the USI (universal spectrum identifier) for the MS1 or MS2 spectra, you can overlay your query with an actual spectrum to workshop what you're trying to find. 
+![MSPeakMass-05](https://user-images.githubusercontent.com/54959775/133172789-ba385556-2cf7-4b57-86a6-b47670893ef5.png)
+
