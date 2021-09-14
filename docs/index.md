@@ -57,7 +57,7 @@ Further, there are functions that can modify this data
 ### Conditionals
 
 These are conditions to filter for scans of interest (by looking for peaks and sets of peaks) within the mass spectrometry data. You can create clauses, 
-which are specific conditions and the associated qualifiers. You may further combine multiple conditions with AND operators. 
+which are specific conditions and the associated qualifiers. You may further combine multiple conditions with ```AND```. ```AND``` will indicate that within a specific spectrum, all the conditions must be met. 
 
 !!! info
     The syntax for this is ```<condition>=<value>```, e.g. ```MS2PROD=144.1```.
