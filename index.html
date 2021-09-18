@@ -375,6 +375,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#any-keyword" class="md-nav__link">
+    ANY keyword
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#variables" class="md-nav__link">
     Variables
   </a>
@@ -803,6 +810,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#any-keyword" class="md-nav__link">
+    ANY keyword
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#variables" class="md-nav__link">
     Variables
   </a>
@@ -1075,7 +1089,7 @@ for either </p>
 </div>
 <h3 id="conditionals">Conditionals<a class="headerlink" href="#conditionals" title="Permanent link">&para;</a></h3>
 <p>These are conditions to filter for scans of interest (by looking for peaks and sets of peaks) within the mass spectrometry data. You can create clauses, 
-which are specific conditions and the associated qualifiers. You may further combine multiple conditions with AND operators. </p>
+which are specific conditions and the associated qualifiers. You may further combine multiple conditions with <code>AND</code>. <code>AND</code> will indicate that within a specific spectrum, all the conditions must be met. </p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>The syntax for this is <code>&lt;condition&gt;=&lt;value&gt;</code>, e.g. <code>MS2PROD=144.1</code>.</p>
@@ -1173,6 +1187,12 @@ MS1MZ=X+2:INTENSITYMATCH=Y*2:INTENSITYMATCHPERCENT=1 # The Y*2 denotes that it m
 <p class="admonition-title">MS2MZ and MS2PROD synonyms</p>
 <p>MS2MZ and MS2PROD mean the same thing in the language. </p>
 </div>
+<h4 id="any-keyword">ANY keyword<a class="headerlink" href="#any-keyword" title="Permanent link">&para;</a></h4>
+<p>If you do not have a specific requirement of a peak m/z, you can use the ANY keyword. </p>
+<p>For example:</p>
+<div class="highlight"><pre><span></span><code>MS2PROD=ANY:MASSDEFECT=massdefect(min=0.1, max=0.2)
+</code></pre></div>
+
 <h4 id="variables">Variables<a class="headerlink" href="#variables" title="Permanent link">&para;</a></h4>
 <p>In cases where you do not know the mass of the peaks for a specific pattern, but you know the pattern of peaks relative to each other, e.g. isotopic patterns, you can use the variable X in place. For example:</p>
 <div class="highlight"><pre><span></span><code>QUERY scaninfo(MS2DATA) WHERE MS2PROD=X and MS2NL=X+16
@@ -1184,7 +1204,7 @@ MS1MZ=X+2:INTENSITYMATCH=Y*2:INTENSITYMATCHPERCENT=1 # The Y*2 denotes that it m
 </div>
 <div class="admonition note">
 <p class="admonition-title">Limiting Mass Defect of X</p>
-<p>If you want to set limits on the decimal part of X, you can set another condition, <code>X=defect(min=0.1, max=0.5)</code></p>
+<p>If you want to set limits on the decimal part of X, you can set another condition, <code>X=massdefect(min=0.1, max=0.5)</code></p>
 </div>
 <h4 id="molecular-formula">Molecular Formula<a class="headerlink" href="#molecular-formula" title="Permanent link">&para;</a></h4>
 <p>To save us all a little bit of time convert lookup of formulas into masses, you can use the syntax:</p>
@@ -1307,7 +1327,7 @@ to collaborate on it. </p>
 <div class="md-source-date">
   <small>
     
-      Last update: September 10, 2021 16:20:12
+      Last update: September 14, 2021 19:13:21
     
   </small>
 </div>
