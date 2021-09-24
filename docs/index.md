@@ -361,6 +361,8 @@ We have a nextflow workflow to enable scalable queries across hundreds of thousa
 
 We have a proteosafe workflow that we have created that nicely integrates into GNPS - Try the beta [here](https://proteomics2.ucsd.edu/ProteoSAFe/index.jsp?params=%7B%22workflow%22%3A%20%22MSQL-NF%22%7D).
 
+See more details [here](gnps.md).
+
 
 #### Workflow Details
 

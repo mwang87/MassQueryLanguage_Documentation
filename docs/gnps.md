@@ -1,6 +1,8 @@
 ## GNPS MassQL Workflow
 
-You can execute your MassQL queries against your own data or public data at GNPS in a highthroughput fashion. Whether its one file or 150K, its possible at GNPS. 
+You can execute your MassQL queries against your own data or public data at GNPS in a highthroughput fashion. Whether its one file or 250K, its possible at GNPS. 
+
+Check out the workflow [here](https://proteomics2.ucsd.edu/ProteoSAFe/index.jsp?params=%7B%22workflow%22%3A%20%22MSQL-NF%22%7D).
 
 
 ### Input Parameters
@@ -19,25 +21,32 @@ Enter your query in this field. You can simply paste one in or write it here.
 !!! note "Multiple Queries"
     If you want to run multiple queries you can separate each query with ```|||``` and all results are merged together
 
-### Linkouts
+### Results Views
 
-Lorem Ipsum
+#### Query Results
 
-### Extraction
+You can see all query results.
 
-Lorem Ipsum
+#### Extraction Results
 
-### Molecular Networking
+If you selected the extraction, then you can view the extracted spectra in case its not possible to view the spectra from the original query data. 
 
-Lorem Ipsum
+#### Molecular Networking
 
-### Data Science-y Visualizations
+You can take the extracted data and create a molecular network. 
 
-Lorem Ipsum
+#### Falcon Clustering
 
-### Trouble Shooting
+You can take the extracted data and cluster the data with Falcon to create a molecular network downstream. Generally, Falcon performs better at clustering when reducing redundancy of the same precursor.
 
-If you don't get any results, go ahead and check the "Workflow Trace" to make sure its not all failed. 
+#### Library Search
+
+You can take the extracted data and search the library.
+
+### Troubleshooting
+
+1. If you don't get any results, go ahead and check the "Workflow Trace" to make sure its not all failed. 
+1. Checkout the interactive app to try out your query on GNPS Libraries
 
 ## Examples
 
