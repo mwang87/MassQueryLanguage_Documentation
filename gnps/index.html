@@ -260,15 +260,23 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#linkouts" class="md-nav__link">
-    Linkouts
+  <a href="#results-views" class="md-nav__link">
+    Results Views
+  </a>
+  
+    <nav class="md-nav" aria-label="Results Views">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#query-results" class="md-nav__link">
+    Query Results
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#extraction" class="md-nav__link">
-    Extraction
+  <a href="#extraction-results" class="md-nav__link">
+    Extraction Results
   </a>
   
 </li>
@@ -281,15 +289,27 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#data-science-y-visualizations" class="md-nav__link">
-    Data Science-y Visualizations
+  <a href="#falcon-clustering" class="md-nav__link">
+    Falcon Clustering
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#trouble-shooting" class="md-nav__link">
-    Trouble Shooting
+  <a href="#library-search" class="md-nav__link">
+    Library Search
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    Troubleshooting
   </a>
   
 </li>
@@ -391,15 +411,23 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#linkouts" class="md-nav__link">
-    Linkouts
+  <a href="#results-views" class="md-nav__link">
+    Results Views
+  </a>
+  
+    <nav class="md-nav" aria-label="Results Views">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#query-results" class="md-nav__link">
+    Query Results
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#extraction" class="md-nav__link">
-    Extraction
+  <a href="#extraction-results" class="md-nav__link">
+    Extraction Results
   </a>
   
 </li>
@@ -412,15 +440,27 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#data-science-y-visualizations" class="md-nav__link">
-    Data Science-y Visualizations
+  <a href="#falcon-clustering" class="md-nav__link">
+    Falcon Clustering
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#trouble-shooting" class="md-nav__link">
-    Trouble Shooting
+  <a href="#library-search" class="md-nav__link">
+    Library Search
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    Troubleshooting
   </a>
   
 </li>
@@ -480,7 +520,8 @@
                   <h1>MassQL GNPS Workflow</h1>
                 
                 <h2 id="gnps-massql-workflow">GNPS MassQL Workflow<a class="headerlink" href="#gnps-massql-workflow" title="Permanent link">&para;</a></h2>
-<p>You can execute your MassQL queries against your own data or public data at GNPS in a highthroughput fashion. Whether its one file or 150K, its possible at GNPS. </p>
+<p>You can execute your MassQL queries against your own data or public data at GNPS in a highthroughput fashion. Whether its one file or 250K, its possible at GNPS. </p>
+<p>Check out the workflow <a href="https://proteomics2.ucsd.edu/ProteoSAFe/index.jsp?params=%7B%22workflow%22%3A%20%22MSQL-NF%22%7D">here</a>.</p>
 <h3 id="input-parameters">Input Parameters<a class="headerlink" href="#input-parameters" title="Permanent link">&para;</a></h3>
 <ol>
 <li>Query</li>
@@ -496,16 +537,22 @@
 <p class="admonition-title">Multiple Queries</p>
 <p>If you want to run multiple queries you can separate each query with <code>|||</code> and all results are merged together</p>
 </div>
-<h3 id="linkouts">Linkouts<a class="headerlink" href="#linkouts" title="Permanent link">&para;</a></h3>
-<p>Lorem Ipsum</p>
-<h3 id="extraction">Extraction<a class="headerlink" href="#extraction" title="Permanent link">&para;</a></h3>
-<p>Lorem Ipsum</p>
-<h3 id="molecular-networking">Molecular Networking<a class="headerlink" href="#molecular-networking" title="Permanent link">&para;</a></h3>
-<p>Lorem Ipsum</p>
-<h3 id="data-science-y-visualizations">Data Science-y Visualizations<a class="headerlink" href="#data-science-y-visualizations" title="Permanent link">&para;</a></h3>
-<p>Lorem Ipsum</p>
-<h3 id="trouble-shooting">Trouble Shooting<a class="headerlink" href="#trouble-shooting" title="Permanent link">&para;</a></h3>
-<p>If you don't get any results, go ahead and check the "Workflow Trace" to make sure its not all failed. </p>
+<h3 id="results-views">Results Views<a class="headerlink" href="#results-views" title="Permanent link">&para;</a></h3>
+<h4 id="query-results">Query Results<a class="headerlink" href="#query-results" title="Permanent link">&para;</a></h4>
+<p>You can see all query results.</p>
+<h4 id="extraction-results">Extraction Results<a class="headerlink" href="#extraction-results" title="Permanent link">&para;</a></h4>
+<p>If you selected the extraction, then you can view the extracted spectra in case its not possible to view the spectra from the original query data. </p>
+<h4 id="molecular-networking">Molecular Networking<a class="headerlink" href="#molecular-networking" title="Permanent link">&para;</a></h4>
+<p>You can take the extracted data and create a molecular network. </p>
+<h4 id="falcon-clustering">Falcon Clustering<a class="headerlink" href="#falcon-clustering" title="Permanent link">&para;</a></h4>
+<p>You can take the extracted data and cluster the data with Falcon to create a molecular network downstream. Generally, Falcon performs better at clustering when reducing redundancy of the same precursor.</p>
+<h4 id="library-search">Library Search<a class="headerlink" href="#library-search" title="Permanent link">&para;</a></h4>
+<p>You can take the extracted data and search the library.</p>
+<h3 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h3>
+<ol>
+<li>If you don't get any results, go ahead and check the "Workflow Trace" to make sure its not all failed. </li>
+<li>Checkout the interactive app to try out your query on GNPS Libraries</li>
+</ol>
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
 <h3 id="sanity-test">Sanity Test<a class="headerlink" href="#sanity-test" title="Permanent link">&para;</a></h3>
 <p><a href="https://proteomics2.ucsd.edu/ProteoSAFe/status.jsp?task=2fd52d1d64074c70aef82658e86c77d0">Link</a></p>
@@ -519,7 +566,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: August 5, 2021 19:59:22
+      Last update: September 24, 2021 16:19:58
     
   </small>
 </div>
