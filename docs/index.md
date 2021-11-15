@@ -43,13 +43,12 @@ for either
 Further, there are functions that can modify this data
 
 1. scaninfo - This provides likely the most information you'd want for each scan
-1. scansum - Summation of the scan
+1. scansum - Summation of the scan (TIC)
 1. scannum - Returns the scan number 
-
+1. scanmaxint - Returns the max intensity per spectrum (BPI)
 
 !!! info "Experimental Functions"
     1. scanrangesum
-    1. scanmaxint
     1. scanmaxmz
     1. scanrun
 
