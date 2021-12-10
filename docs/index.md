@@ -13,7 +13,7 @@ natural for mass spectrometry users. Broadly we attempt to design it according t
 
 ## Why does Mass Spec Query Language Exist?
 
-The intrinsic physical and chemical property of molecules when analyzed by mass spectrometry imprint patterns upon mass spectrometry data. This affords the opportunity formulate queries to find these patterns in raw mass spectrometry data. However, within the computational mass spectrometry ecosystem, the lack of a ergonomic, flexible, and scalable approach to express these patterns prevents the community from taking full advantage of expert knowledge to thoroughly and quickly mine mass spectrometry data for new molecules. Therefore, I created the Mass Spectrometry Query Language (MassQL) to empower mass spectrometrists and chemists to write their own queries in a flexible, precise, and scalable fashion. 
+The intrinsic physical and chemical property of molecules when analyzed by mass spectrometry imprint patterns upon mass spectrometry data. This affords the opportunity to formulate queries to find these patterns in raw mass spectrometry data. However, within the computational mass spectrometry ecosystem, the lack of a ergonomic, flexible, and scalable approach to express these patterns prevents the community from taking full advantage of expert knowledge of these patterns to thoroughly and quickly mine mass spectrometry data for new molecules. Therefore, I created the Mass Spectrometry Query Language (MassQL) to empower mass spectrometrists and chemists to write their own queries in a flexible, precise, and scalable fashion. 
 
 ## Developers
 
