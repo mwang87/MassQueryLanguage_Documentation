@@ -11,6 +11,10 @@ natural for mass spectrometry users. Broadly we attempt to design it according t
 1. Precision - Exactly prescribe how to find data without ambiguity
 1. Relatively Natural - MassQL should be relatively easy to read and write and even use as a way to communicate ideas about mass spectrometry, you know like a language. 
 
+## Why does Mass Spec Query Language Exist?
+
+The intrinsic physical and chemical property of molecules when analyzed by mass spectrometry imprint patterns upon mass spectrometry data. This affords the opportunity formulate queries to find these patterns in raw mass spectrometry data. However, within the computational mass spectrometry ecosystem, the lack of a ergonomic, flexible, and scalable approach to express these patterns prevents the community from taking full advantage of expert knowledge to thoroughly and quickly mine mass spectrometry data for new molecules. Therefore, I created the Mass Spectrometry Query Language (MassQL) to empower mass spectrometrists and chemists to write their own queries in a flexible, precise, and scalable fashion. 
+
 ## Developers
 
 Mingxun Wang is the creator and main developer of MassQL. Please contact me if you have questions! I'm hoping this becomes a community effort so reach out if you want to help/use MassQL. 
