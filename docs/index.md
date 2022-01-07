@@ -380,6 +380,10 @@ There are several options that you probably will care about
     select datasets (or your own), with hundreds of files queriable at once. However, sometimes you want to go really big and search everything at once. We have these
     tools available but they currently require a large amount of compute and require special permissions. If you want to do repository scale queries, please contact Ming
     to collaborate on it. 
+    
+#### PyOpenMS
+
+You can checkout how to use MassQL In PyOpenMS [here](https://pyopenms.readthedocs.io/en/latest/massql.html).
 
 ### Web API
 
