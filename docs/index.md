@@ -124,7 +124,7 @@ The units here are whatever your mass spectrometer reports and are not converted
 
 #### MS2NL
 
-Looking for a neutral loss from precursor in the MS2 spectrum
+Looking for a neutral loss from precursor m/z in the MS2 spectrum. For example, if a molecule has a precursor m/z of 500, and you are searching for an MS2NL of 16, it will look for a peak appearing at 500 - 16 = 484 m/z. 
 
 ### Qualifiers
 
