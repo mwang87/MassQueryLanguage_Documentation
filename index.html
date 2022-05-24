@@ -55,7 +55,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#what-is-mass-spec-query-language" class="md-skip">
+        <a href="#about-mass-spec-query-language" class="md-skip">
           Skip to content
         </a>
       
@@ -214,8 +214,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#what-is-mass-spec-query-language" class="md-nav__link">
-    What is Mass Spec Query Language
+  <a href="#about-mass-spec-query-language" class="md-nav__link">
+    About Mass Spec Query Language
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-does-mass-spec-query-language-exist" class="md-nav__link">
+    Why does Mass Spec Query Language Exist?
   </a>
   
 </li>
@@ -547,6 +554,13 @@
           <li class="md-nav__item">
   <a href="#workflow-details" class="md-nav__link">
     Workflow Details
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pyopenms" class="md-nav__link">
+    PyOpenMS
   </a>
   
 </li>
@@ -649,8 +663,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#what-is-mass-spec-query-language" class="md-nav__link">
-    What is Mass Spec Query Language
+  <a href="#about-mass-spec-query-language" class="md-nav__link">
+    About Mass Spec Query Language
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-does-mass-spec-query-language-exist" class="md-nav__link">
+    Why does Mass Spec Query Language Exist?
   </a>
   
 </li>
@@ -986,6 +1007,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#pyopenms" class="md-nav__link">
+    PyOpenMS
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1039,7 +1067,8 @@
                 
                   <h1>MassQL Introduction</h1>
                 
-                <h2 id="what-is-mass-spec-query-language">What is Mass Spec Query Language<a class="headerlink" href="#what-is-mass-spec-query-language" title="Permanent link">&para;</a></h2>
+                <p><img alt="" src="img/logo.png" /></p>
+<h2 id="about-mass-spec-query-language">About Mass Spec Query Language<a class="headerlink" href="#about-mass-spec-query-language" title="Permanent link">&para;</a></h2>
 <p>The Mass Spec Query Langauge (MassQL) is a domain specific language meant to be a succinct way to 
 express a query in a mass spectrometry centric fashion. It is inspired by SQL, 
 but it attempts to bake in assumptions of mass spectrometry to make querying much more
@@ -1049,6 +1078,8 @@ natural for mass spectrometry users. Broadly we attempt to design it according t
 <li>Precision - Exactly prescribe how to find data without ambiguity</li>
 <li>Relatively Natural - MassQL should be relatively easy to read and write and even use as a way to communicate ideas about mass spectrometry, you know like a language. </li>
 </ol>
+<h2 id="why-does-mass-spec-query-language-exist">Why does Mass Spec Query Language Exist?<a class="headerlink" href="#why-does-mass-spec-query-language-exist" title="Permanent link">&para;</a></h2>
+<p>The intrinsic physical and chemical property of molecules when analyzed by mass spectrometry imprint patterns upon mass spectrometry data. This affords the opportunity to formulate queries to find these patterns in raw mass spectrometry data. However, within the computational mass spectrometry ecosystem, the lack of a ergonomic, flexible, and scalable approach to express these patterns prevents the community from taking full advantage of expert knowledge of these patterns to thoroughly and quickly mine mass spectrometry data for new molecules. Therefore, I created the Mass Spectrometry Query Language (MassQL) to empower mass spectrometrists and chemists to write their own queries in a flexible, precise, and scalable fashion. </p>
 <h2 id="developers">Developers<a class="headerlink" href="#developers" title="Permanent link">&para;</a></h2>
 <p>Mingxun Wang is the creator and main developer of MassQL. Please contact me if you have questions! I'm hoping this becomes a community effort so reach out if you want to help/use MassQL. </p>
 <h2 id="definition-of-a-query">Definition of a Query<a class="headerlink" href="#definition-of-a-query" title="Permanent link">&para;</a></h2>
@@ -1128,7 +1159,7 @@ This represents approximately this parallelogram region. </p>
 <p><img alt="" src="img/mobility_query1.png" /></p>
 </div>
 <h4 id="ms2nl">MS2NL<a class="headerlink" href="#ms2nl" title="Permanent link">&para;</a></h4>
-<p>Looking for a neutral loss from precursor in the MS2 spectrum</p>
+<p>Looking for a neutral loss from precursor m/z in the MS2 spectrum. For example, if a molecule has a precursor m/z of 500, and you are searching for an MS2NL of 16, it will look for a peak appearing at 500 - 16 = 484 m/z. </p>
 <h3 id="qualifiers">Qualifiers<a class="headerlink" href="#qualifiers" title="Permanent link">&para;</a></h3>
 <p>These can be attached to conditions to modify some properties about the peaks we are looking for. </p>
 <h4 id="mass-accuracy">Mass Accuracy<a class="headerlink" href="#mass-accuracy" title="Permanent link">&para;</a></h4>
@@ -1310,6 +1341,8 @@ select datasets (or your own), with hundreds of files queriable at once. However
 tools available but they currently require a large amount of compute and require special permissions. If you want to do repository scale queries, please contact Ming
 to collaborate on it. </p>
 </div>
+<h4 id="pyopenms">PyOpenMS<a class="headerlink" href="#pyopenms" title="Permanent link">&para;</a></h4>
+<p>You can checkout how to use MassQL In PyOpenMS <a href="https://pyopenms.readthedocs.io/en/latest/massql.html">here</a>.</p>
 <h3 id="web-api">Web API<a class="headerlink" href="#web-api" title="Permanent link">&para;</a></h3>
 <p>We have built out a web API for people to use, especially for parsing. </p>
 <div class="highlight"><pre><span></span><code>https://msql.ucsd.edu/parse?query=QUERY%20MS2DATA%20WHERE%20MS1MZ=100
@@ -1328,7 +1361,7 @@ to collaborate on it. </p>
 <div class="md-source-date">
   <small>
     
-      Last update: November 15, 2021 21:17:00
+      Last update: May 24, 2022 15:50:28
     
   </small>
 </div>
