@@ -1,6 +1,7 @@
 
+![](img/logo.png)
 
-## What is Mass Spec Query Language
+## About Mass Spec Query Language
 
 The Mass Spec Query Langauge (MassQL) is a domain specific language meant to be a succinct way to 
 express a query in a mass spectrometry centric fashion. It is inspired by SQL, 
