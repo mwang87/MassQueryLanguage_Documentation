@@ -12,6 +12,10 @@ natural for mass spectrometry users. Broadly we attempt to design it according t
 1. Precision - Exactly prescribe how to find data without ambiguity
 1. Relatively Natural - MassQL should be relatively easy to read and write and even use as a way to communicate ideas about mass spectrometry, you know like a language. 
 
+## Why does Mass Spec Query Language Exist?
+
+The intrinsic physical and chemical property of molecules when analyzed by mass spectrometry imprint patterns upon mass spectrometry data. This affords the opportunity to formulate queries to find these patterns in raw mass spectrometry data. However, within the computational mass spectrometry ecosystem, the lack of a ergonomic, flexible, and scalable approach to express these patterns prevents the community from taking full advantage of expert knowledge of these patterns to thoroughly and quickly mine mass spectrometry data for new molecules. Therefore, I created the Mass Spectrometry Query Language (MassQL) to empower mass spectrometrists and chemists to write their own queries in a flexible, precise, and scalable fashion. 
+
 ## Developers
 
 Mingxun Wang is the creator and main developer of MassQL. Please contact me if you have questions! I'm hoping this becomes a community effort so reach out if you want to help/use MassQL. 
@@ -121,7 +125,7 @@ The units here are whatever your mass spectrometer reports and are not converted
 
 #### MS2NL
 
-Looking for a neutral loss from precursor in the MS2 spectrum
+Looking for a neutral loss from precursor m/z in the MS2 spectrum. For example, if a molecule has a precursor m/z of 500, and you are searching for an MS2NL of 16, it will look for a peak appearing at 500 - 16 = 484 m/z. 
 
 ### Qualifiers
 
@@ -377,6 +381,10 @@ There are several options that you probably will care about
     select datasets (or your own), with hundreds of files queriable at once. However, sometimes you want to go really big and search everything at once. We have these
     tools available but they currently require a large amount of compute and require special permissions. If you want to do repository scale queries, please contact Ming
     to collaborate on it. 
+    
+#### PyOpenMS
+
+You can checkout how to use MassQL In PyOpenMS [here](https://pyopenms.readthedocs.io/en/latest/massql.html).
 
 ### Web API
 
