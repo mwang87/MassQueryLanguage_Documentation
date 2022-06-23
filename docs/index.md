@@ -281,7 +281,6 @@ will yield
 MS2PROD=76.03930487103999
 ```
 
-
 ### Filters
 
 Filters are like conditional but we don't elimate scans based on the condition. Rather, we simply filter out peaks within the spectra. 
@@ -298,7 +297,13 @@ If you are looking for two peaks but either of them could be present, you can us
 MS2PROD=(100 OR 104)
 ```
 
-You can use with variables as well. 
+You can use with variables as well.
+
+With OR operations, you can specify multiple masses to look for. To give you more flexibility, you can require a minimum and maximum number of those masses to appear in a single mass spectrum. You can use the CARDINALITY qualifier to denote how many of the optional masses should appear. For example if 2 out of the 3 masses should appear:
+
+```
+MS2PROD=(100 OR 104 OR 106):CARDINALITY=range(min=2, max=2)
+```
 
 ## MassQL Patterns
 
