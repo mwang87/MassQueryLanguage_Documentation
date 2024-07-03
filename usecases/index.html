@@ -1,0 +1,1072 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://mwang87.github.io/MassQueryLanguage_Documentation/usecases/">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.19">
+    
+    
+      
+        <title>Usecases - MassQL Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.eebd395e.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#massql-query-for-organophosphate-compounds-in-the-environment" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="MassQL Documentation" class="md-header__button md-logo" aria-label="MassQL Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            MassQL Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Usecases
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/mwang87/MassQueryLanguage_Documentation" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    mwang87/MassQueryLanguage_Documentation
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="MassQL Documentation" class="md-nav__button md-logo" aria-label="MassQL Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    MassQL Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/mwang87/MassQueryLanguage_Documentation" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    mwang87/MassQueryLanguage_Documentation
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        MassQL Introduction
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../patterns/" class="md-nav__link">
+        MassQL Patterns
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gnps/" class="md-nav__link">
+        MassQL GNPS Workflow
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../visualizer/" class="md-nav__link">
+        MassQL Query Visualizer
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../user_cases.md" class="md-nav__link">
+        MassQL Use Cases
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#massql-query-for-organophosphate-compounds-in-the-environment" class="md-nav__link">
+    MassQL Query for Organophosphate Compounds in the Environment
+  </a>
+  
+    <nav class="md-nav" aria-label="MassQL Query for Organophosphate Compounds in the Environment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#massql-query" class="md-nav__link">
+    MassQL Query
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#massql-translation" class="md-nav__link">
+    MassQL Translation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#massql-query-link" class="md-nav__link">
+    MassQL Query Link
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-data-analysis" class="md-nav__link">
+    Additional Data Analysis
+  </a>
+  
+    <nav class="md-nav" aria-label="Additional Data Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gnps-msms-library-search" class="md-nav__link">
+    GNPS MS/MS Library Search
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-availability" class="md-nav__link">
+    Data Availability
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#background" class="md-nav__link">
+    Background
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#results" class="md-nav__link">
+    Results
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#massql-query-for-organophosphate-compounds-in-the-environment-at-data-repository-scale" class="md-nav__link">
+    MassQL Query for Organophosphate Compounds in the Environment at Data Repository Scale
+  </a>
+  
+    <nav class="md-nav" aria-label="MassQL Query for Organophosphate Compounds in the Environment at Data Repository Scale">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#massql-query_1" class="md-nav__link">
+    MassQL Query
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#massql-translation_1" class="md-nav__link">
+    MassQL Translation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#massql-query-link-repository-scale" class="md-nav__link">
+    MassQL Query Link (repository-scale)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-data-analysis_1" class="md-nav__link">
+    Additional Data Analysis
+  </a>
+  
+    <nav class="md-nav" aria-label="Additional Data Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#falcon-cluster-eps-03" class="md-nav__link">
+    Falcon Cluster, EPS = 0.3
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gnps-molecular-networking" class="md-nav__link">
+    GNPS Molecular Networking
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-availability_1" class="md-nav__link">
+    Data Availability
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#background_1" class="md-nav__link">
+    Background
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#results_1" class="md-nav__link">
+    Results
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#detection-of-fusaricidin-depsipeptides-in-microbial-extracts" class="md-nav__link">
+    Detection of Fusaricidin Depsipeptides in Microbial Extracts
+  </a>
+  
+    <nav class="md-nav" aria-label="Detection of Fusaricidin Depsipeptides in Microbial Extracts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#massql-query_2" class="md-nav__link">
+    MassQL Query
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#massql-translation_2" class="md-nav__link">
+    MassQL Translation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#massql-query-link_1" class="md-nav__link">
+    MassQL Query Link
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#massql-query-link-large-scale" class="md-nav__link">
+    MassQL Query Link (large scale)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-data-analysis_2" class="md-nav__link">
+    Additional Data Analysis
+  </a>
+  
+    <nav class="md-nav" aria-label="Additional Data Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gnps-molecular-networking_1" class="md-nav__link">
+    GNPS Molecular Networking
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#background_2" class="md-nav__link">
+    Background
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#impact-of-leishmania-major-infection-on-glycerophosphocholine-lipids" class="md-nav__link">
+    Impact of Leishmania major Infection on Glycerophosphocholine Lipids
+  </a>
+  
+    <nav class="md-nav" aria-label="Impact of Leishmania major Infection on Glycerophosphocholine Lipids">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#massql-query_3" class="md-nav__link">
+    MassQL Query
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#massql-translation_3" class="md-nav__link">
+    MassQL Translation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#massql-query-link_2" class="md-nav__link">
+    MassQL Query Link
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-data-analysis_3" class="md-nav__link">
+    Additional Data Analysis
+  </a>
+  
+    <nav class="md-nav" aria-label="Additional Data Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gnps-feature-based-molecular-networking" class="md-nav__link">
+    GNPS Feature-based Molecular Networking
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-availability_2" class="md-nav__link">
+    Data Availability
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#background_3" class="md-nav__link">
+    Background
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#results_2" class="md-nav__link">
+    Results
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metabolism-of-antibiotic-trimethoprim-by-burkholderia-cenocepacia" class="md-nav__link">
+    Metabolism of Antibiotic Trimethoprim by Burkholderia cenocepacia
+  </a>
+  
+    <nav class="md-nav" aria-label="Metabolism of Antibiotic Trimethoprim by Burkholderia cenocepacia">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#massql-query_4" class="md-nav__link">
+    MassQL Query
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#massql-translation_4" class="md-nav__link">
+    MassQL Translation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#massql-query-link_3" class="md-nav__link">
+    MassQL Query Link
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-data-analysis_4" class="md-nav__link">
+    Additional Data Analysis
+  </a>
+  
+    <nav class="md-nav" aria-label="Additional Data Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gnps-feature-based-molecular-networking_1" class="md-nav__link">
+    GNPS Feature-based Molecular Networking
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-availability_3" class="md-nav__link">
+    Data Availability
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#background_4" class="md-nav__link">
+    Background
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#results_3" class="md-nav__link">
+    Results
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#investigating-cannabidiol-degradation-products-using-massql" class="md-nav__link">
+    Investigating Cannabidiol Degradation Products using MassQL
+  </a>
+  
+    <nav class="md-nav" aria-label="Investigating Cannabidiol Degradation Products using MassQL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#massql-query_5" class="md-nav__link">
+    MassQL Query
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#massql-translation_5" class="md-nav__link">
+    MassQL Translation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#massql-query-links" class="md-nav__link">
+    MassQL Query Links
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-data-analysis_5" class="md-nav__link">
+    Additional Data Analysis
+  </a>
+  
+    <nav class="md-nav" aria-label="Additional Data Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gnps-molecular-networking_2" class="md-nav__link">
+    GNPS Molecular Networking
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#background_5" class="md-nav__link">
+    Background
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    Methods
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#results_4" class="md-nav__link">
+    Results
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#finding-drug-metabolites-from-public-fecal-datasets" class="md-nav__link">
+    Finding Drug Metabolites from Public Fecal Datasets
+  </a>
+  
+    <nav class="md-nav" aria-label="Finding Drug Metabolites from Public Fecal Datasets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#massql-query_6" class="md-nav__link">
+    MassQL Query
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#massql-translation_6" class="md-nav__link">
+    MassQL Translation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#massql-query-link_4" class="md-nav__link">
+    MassQL Query Link
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-data-analysis_6" class="md-nav__link">
+    Additional Data Analysis
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-availability_4" class="md-nav__link">
+    Data Availability
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#background_6" class="md-nav__link">
+    Background
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methods_1" class="md-nav__link">
+    Methods
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#results_5" class="md-nav__link">
+    Results
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+  <h1>Usecases</h1>
+
+<h2 id="massql-query-for-organophosphate-compounds-in-the-environment">MassQL Query for Organophosphate Compounds in the Environment<a class="headerlink" href="#massql-query-for-organophosphate-compounds-in-the-environment" title="Permanent link">&para;</a></h2>
+<p><strong>Author/s:</strong> Nina Zhao</p>
+<h3 id="massql-query">MassQL Query<a class="headerlink" href="#massql-query" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>QUERY scansum(MS2DATA) WHERE MS2PROD=98.9847:TOLERANCEPPM=50:INTENSITYPERCENT=50 FILTER MS2PROD=98.9847
+</code></pre></div>
+<h3 id="massql-translation">MassQL Translation<a class="headerlink" href="#massql-translation" title="Permanent link">&para;</a></h3>
+<p>Returning the summed scan information on MS2.<br />
+The following conditions are applied to find scans in the mass spec data:</p>
+<ul>
+<li>Finding MS2 peak at m/z 98.9847 with a 50.0 PPM tolerance and a minimum percent intensity relative to base peak of 50.0%.</li>
+<li>Finding MS2 peak at m/z 98.9847.</li>
+</ul>
+<h3 id="massql-query-link">MassQL Query Link<a class="headerlink" href="#massql-query-link" title="Permanent link">&para;</a></h3>
+<p><a href="https://proteomics2.ucsd.edu/ProteoSAFe/status.jsp?task=e3504aff6ee14a619b19a3ffa3625fb6">MassQL Query Link</a></p>
+<h3 id="additional-data-analysis">Additional Data Analysis<a class="headerlink" href="#additional-data-analysis" title="Permanent link">&para;</a></h3>
+<h4 id="gnps-msms-library-search">GNPS MS/MS Library Search<a class="headerlink" href="#gnps-msms-library-search" title="Permanent link">&para;</a></h4>
+<p><a href="https://gnps.ucsd.edu/ProteoSAFe/status.jsp?task=1b0382c15423412cba012ed4162d1ebf">GNPS MS/MS Library Search</a></p>
+<h4 id="data-availability">Data Availability<a class="headerlink" href="#data-availability" title="Permanent link">&para;</a></h4>
+<p>MSV000087187</p>
+<h3 id="background">Background<a class="headerlink" href="#background" title="Permanent link">&para;</a></h3>
+<p>Organophosphate esters (OPEs) are widely used as flame retardants and plasticizers in consumer and industrial products. The environmental hazard of OPEs is of concern due to their increasing usage as the replacements of traditional brominated flame retardants and their toxicity effects, which include fecundity decrease, thyroid endocrine disruption, and developmental toxicity in fish. Most of the environmental investigations on OPEs employ targeted analysis with mass spectrometry, but recent studies utilizing non-targeted mass spectrometry have revealed novel OPEs. Therefore, screening strategies for OPEs in environmental samples are needed.</p>
+<p>OPEs have the general structure O=P(OR)3, a central phosphate group with three alkyl or aromatic moieties. Previous studies have reported the phosphate ion (H4O4P+, m/z 98.9842) as the diagnostic fragment of this class of chemicals. We previously identified several OPEs in the marine water samples from Puget Sound. Here, we used MassQL to search for the phosphate ion fragment in the same dataset.</p>
+<h3 id="results">Results<a class="headerlink" href="#results" title="Permanent link">&para;</a></h3>
+<p>MassQL returned 771 spectra hits; among them, ~22% (182, belonging to 4 major precursors m/z) were noise spectra which required further filters on percent of total intensity to be ruled out. The rest of the spectra hits (589) belong to ~60 unique molecular features and show a true fragment of m/z 98.98. A subsequent library search identified four OPEs: tributyl phosphate, tris(chloroethyl) phosphate, tris(chloroisopropyl) phosphate, and tris(butoxyethyl) phosphate, explaining ~56% (331) of the non-noise spectra hits. Tributyl phosphate was not identified in our original publication based on traditional fold-change non-targeted analysis. This example demonstrated the possibility to screen for environmental contaminants in MS data without a predefined suspect list.</p>
+<h2 id="massql-query-for-organophosphate-compounds-in-the-environment-at-data-repository-scale">MassQL Query for Organophosphate Compounds in the Environment at Data Repository Scale<a class="headerlink" href="#massql-query-for-organophosphate-compounds-in-the-environment-at-data-repository-scale" title="Permanent link">&para;</a></h2>
+<p><strong>Author/s:</strong> Nina Zhao</p>
+<h3 id="massql-query_1">MassQL Query<a class="headerlink" href="#massql-query_1" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>QUERY scansum(MS2DATA) WHERE MS2PROD=98.9847:TOLERANCEPPM=50:INTENSITYPERCENT=50 FILTER MS2PROD=98.9847
+</code></pre></div>
+<h3 id="massql-translation_1">MassQL Translation<a class="headerlink" href="#massql-translation_1" title="Permanent link">&para;</a></h3>
+<p>Returning the summed scan information on MS2.<br />
+The following conditions are applied to find scans in the mass spec data:</p>
+<ul>
+<li>Finding MS2 peak at m/z 98.9847 with a 50.0 PPM tolerance and a minimum percent intensity relative to base peak of 50.0%.</li>
+<li>Finding MS2 peak at m/z 98.9847.</li>
+</ul>
+<h3 id="massql-query-link-repository-scale">MassQL Query Link (repository-scale)<a class="headerlink" href="#massql-query-link-repository-scale" title="Permanent link">&para;</a></h3>
+<p><a href="https://proteomics2.ucsd.edu/ProteoSAFe/result.jsp?task=f5094e83a4f042e88f0d423dcb52b11c&amp;view=extract_results">MassQL Query Link</a></p>
+<h3 id="additional-data-analysis_1">Additional Data Analysis<a class="headerlink" href="#additional-data-analysis_1" title="Permanent link">&para;</a></h3>
+<h4 id="falcon-cluster-eps-03">Falcon Cluster, EPS = 0.3<a class="headerlink" href="#falcon-cluster-eps-03" title="Permanent link">&para;</a></h4>
+<p><a href="https://proteomics2.ucsd.edu/ProteoSAFe/status.jsp?task=f1a4a4c3496645e8b643f8d41c601d03">Falcon Cluster</a></p>
+<h4 id="gnps-molecular-networking">GNPS Molecular Networking<a class="headerlink" href="#gnps-molecular-networking" title="Permanent link">&para;</a></h4>
+<p><a href="https://proteomics2.ucsd.edu/ProteoSAFe/status.jsp?task=cf943d6808ed4d7da441184f531a62c3">GNPS Molecular Networking</a></p>
+<h4 id="data-availability_1">Data Availability<a class="headerlink" href="#data-availability_1" title="Permanent link">&para;</a></h4>
+<p>All public data from Q Exactive on GNPS</p>
+<h3 id="background_1">Background<a class="headerlink" href="#background_1" title="Permanent link">&para;</a></h3>
+<p>To discover novel organophosphate compounds, we ran the phosphate ion MassQL query developed in Use Case 1.1.1 over all Q Exactive data on the GNPS repository. The MassQL query returned 338,439 spectra hits in total. Based on a comprehensive list of organophosphate compounds (n = 95) compiled by Ye et al. (2021), only 15% (51,310) of the spectra hits could be explained by these known organophosphate compounds (based on precursor m/z match with 20 ppm mass error). Top matches included tris(chloropropyl) phosphate (31,039 matches), tributyl phosphate and isomers (12,967 matches), tri(2-ethylhexyl) phosphate (or structural isomers; 3511 matches), and triethyl phosphate (2171 matches). The remaining 85% matches represent a candidate pool for new organophosphate compounds.</p>
+<h3 id="results_1">Results<a class="headerlink" href="#results_1" title="Permanent link">&para;</a></h3>
+<p>We further analyzed the query results using molecular networking. MS-Cluster, the clustering tool for classical molecular networking on GNPS, failed to handle such a large amount of spectra and returned many repetitive clusters. We explored a newly developed clustering tool, Falcon, which very effectively reduced the number of repetitive clusters. Sending the Falcon output to molecular networking returned 169 spectra families. Mining into these spectra families led to new compound identification. For example, SI Figure 1.1.2 - 1a demonstrated a spectra family of organophosphate compounds with alkyl substituents. The m/z 267.17 represented tributyl phosphate with dimers at m/z 533.34, and the m/z 435.36 represented trioctyl phosphate (or structural isomers) with dimers at m/z 869.71 and trimers at m/z 1305.07. Notably, the group of m/z 211.03 matched the molar mass of dibutyl phosphate, which was not discovered by library search. SI Figure 1.1.2 - 1b demonstrated a spectra family of chlorinated organophosphate compounds. The m/z 428.89 matched tris(dichloro-propyl) phosphate, and m/z 327.01 matched tris(chloro-propryl) phosphate compounds. Such findings highlighted the capacity of MassQL coupled to classical molecular networking to connect related chemicals on a repository scale and to identify new chemicals.</p>
+<p>TODO: Insert figures</p>
+<h2 id="detection-of-fusaricidin-depsipeptides-in-microbial-extracts">Detection of Fusaricidin Depsipeptides in Microbial Extracts<a class="headerlink" href="#detection-of-fusaricidin-depsipeptides-in-microbial-extracts" title="Permanent link">&para;</a></h2>
+<p><strong>Author/s:</strong> Osama G. Mohamed and Ashootosh Tripathi</p>
+<h3 id="massql-query_2">MassQL Query<a class="headerlink" href="#massql-query_2" title="Permanent link">&para;</a></h3>
+<p>QUERY scaninfo(MS2DATA) WHERE 
+MS2NL=255.23: TOLERANCEMZ=0.02 AND MS2PROD=256.23:TOLERANCEMZ=0.02</p>
+<h3 id="massql-translation_2">MassQL Translation<a class="headerlink" href="#massql-translation_2" title="Permanent link">&para;</a></h3>
+<p>Returning the scan information on MS2.<br />
+The following conditions are applied to find scans in the mass spec data:</p>
+<ul>
+<li>Finding MS2 neutral loss peak at m/z 255.23 with a 0.02 m/z tolerance.</li>
+<li>Finding MS2 peak at m/z 256.23 with a 0.02 m/z tolerance.</li>
+</ul>
+<h3 id="massql-query-link_1">MassQL Query Link<a class="headerlink" href="#massql-query-link_1" title="Permanent link">&para;</a></h3>
+<p><a href="https://proteomics2.ucsd.edu/ProteoSAFe/status.jsp?task=3afe33c186a44bfe945a74d21c06f51e">MassQL Query Link</a></p>
+<h3 id="massql-query-link-large-scale">MassQL Query Link (large scale)<a class="headerlink" href="#massql-query-link-large-scale" title="Permanent link">&para;</a></h3>
+<p><a href="https://proteomics2.ucsd.edu/ProteoSAFe/status.jsp?task=7fc6e39e34f84a159cb171b31ca03b09">MassQL Query Link (large scale)</a></p>
+<h3 id="additional-data-analysis_2">Additional Data Analysis<a class="headerlink" href="#additional-data-analysis_2" title="Permanent link">&para;</a></h3>
+<h4 id="gnps-molecular-networking_1">GNPS Molecular Networking<a class="headerlink" href="#gnps-molecular-networking_1" title="Permanent link">&para;</a></h4>
+<p><a href="https://gnps.ucsd.edu/ProteoSAFe/status.jsp?task=9ef11868efa94bde892d27101bb579a4">GNPS Molecular Networking</a></p>
+<h3 id="background_2">Background<a class="headerlink" href="#background_2" title="Permanent link">&para;</a></h3>
+<p>Fusaricidins are a class of cyclic lipopeptides isolated from <em>Paenibacillus</em> sp. Their structures consist of two moieties, a cyclic polypeptide that consists of six amino acids and a guanidino-3-hydroxypentadecanoic acid fatty acid moiety (GHPD). This class of metabolites has shown in vitro antimicrobial activity against Gram-positive bacteria and <em>Fusarium</em> fungi. Fusaricidins MS2 fragmentation spectra are characterized with the fragment product ion m/z 256.2389 (GHPD) and neutral loss of 255.23 (residual cyclopeptide moiety, MH-GHPD) (SI Figure 1.2 - 1).</p>
+<p>The use of MassQL enabled us to quickly detect and group fusaricidins in a microbial extract. The current resources of University of Michigan Natural Products Discovery Core (UM-NPDC) include a library of over 50,000 natural product extracts (NPE) collected and curated from across the world, including Costa Rica, Papua New Guinea, Israel, Nepal, Panama, Peru, and the United States. To date, approximately 3000 NPEs have been chemically profiled using UHPLC-qTOF, and the collection is still growing. This tool can foster the discovery process of new congeners of interesting metabolites with characteristic tandem MS spectra.</p>
+<p>TODO: Insert figure</p>
+<h2 id="impact-of-leishmania-major-infection-on-glycerophosphocholine-lipids">Impact of Leishmania major Infection on Glycerophosphocholine Lipids<a class="headerlink" href="#impact-of-leishmania-major-infection-on-glycerophosphocholine-lipids" title="Permanent link">&para;</a></h2>
+<p><strong>Author/s:</strong> Laura-Isobel McCall</p>
+<h3 id="massql-query_3">MassQL Query<a class="headerlink" href="#massql-query_3" title="Permanent link">&para;</a></h3>
+<p>QUERY scaninfo(MS2DATA) WHERE 
+MS2PROD=184.0739:TOLERANCEMZ=0.01:INTENSITYPERCENT=30:INTENSITYVALUE=500 AND 
+MS2PROD=125.0004:TOLERANCEMZ=0.01:INTENSITYPERCENT=10:INTENSITYVALUE=1500 AND 
+MS2PROD=104.1075:TOLERANCEMZ=0.01 AND 
+MS2PROD=86.09697:TOLERANCEMZ=0.01:INTENSITYPERCENT=10:INTENSITYVALUE=2000</p>
+<h3 id="massql-translation_3">MassQL Translation<a class="headerlink" href="#massql-translation_3" title="Permanent link">&para;</a></h3>
+<p>Returning the scan information on MS2.<br />
+The following conditions are applied to find scans in the mass spec data:</p>
+<ul>
+<li>Finding MS2 peak at m/z 184.0739 with a 0.01 m/z tolerance, a minimum percent intensity relative to base peak of 30.0%, and a minimum intensity value of 500.0.</li>
+<li>Finding MS2 peak at m/z 125.0004 with a 0.01 m/z tolerance, a minimum percent intensity relative to base peak of 10.0%, and a minimum intensity value of 1500.0.</li>
+<li>Finding MS2 peak at m/z 104.1075 with a 0.01 m/z tolerance.</li>
+<li>Finding MS2 peak at m/z 86.09697 with a 0.01 m/z tolerance, a minimum percent intensity relative to base peak of 10.0%, and a minimum intensity value of 2000.0.</li>
+</ul>
+<h3 id="massql-query-link_2">MassQL Query Link<a class="headerlink" href="#massql-query-link_2" title="Permanent link">&para;</a></h3>
+<p><a href="https://proteomics2.ucsd.edu/ProteoSAFe/status.jsp?task=abb71fc649a945fc950ad7fd684eefeb">MassQL Query Link</a></p>
+<h3 id="additional-data-analysis_3">Additional Data Analysis<a class="headerlink" href="#additional-data-analysis_3" title="Permanent link">&para;</a></h3>
+<h4 id="gnps-feature-based-molecular-networking">GNPS Feature-based Molecular Networking<a class="headerlink" href="#gnps-feature-based-molecular-networking" title="Permanent link">&para;</a></h4>
+<p><a href="https://gnps.ucsd.edu/ProteoSAFe/status.jsp?task=451754c383de461e9e4abdf6eb3199d2">GNPS Feature-based Molecular Networking</a></p>
+<h4 id="data-availability_2">Data Availability<a class="headerlink" href="#data-availability_2" title="Permanent link">&para;</a></h4>
+<p>MSV000081004</p>
+<h3 id="background_3">Background<a class="headerlink" href="#background_3" title="Permanent link">&para;</a></h3>
+<p>Current treatments for neglected parasitic diseases suffer from low efficacy, high rates of adverse effects, and emergence of drug resistance. Identifying metabolic pathways altered by infection in vivo may lead to the discovery of new antiparasitic treatment strategies, which are sorely needed. Studies of infection-modulated metabolites have revealed infection-induced metabolic perturbations in multiple members of the glycerophosphocholine family of phospholipids, necessitating a detailed investigation of this family of metabolites under infection conditions.</p>
+<p>Glycerophosphocholines have four diagnostic MS2 fragmentation peaks in positive mode: m/z 184.0739 (phosphocholine), m/z 125.0004 (2,2-Dihydroxy-1,3,2-dioxaphospholan-2-ium), m/z 104.1075 (choline), and m/z 86.09697 (N,N,N-Trimethylethenaminium) from the phospholipid head group. We therefore built a MassQL query to search a dataset of <em>Leishmania major</em>-infected and uninfected mouse ear tissue.</p>
+<h3 id="results_2">Results<a class="headerlink" href="#results_2" title="Permanent link">&para;</a></h3>
+<p>The MassQL query returned all of the glycerophosphocholines that had previously been annotated via molecular networking and manually inspected for the presence of the four MS2 glycerophosphocholine diagnostic peaks. Prior manual analysis had taken over 4 hours, whereas the MassQL run took 2.5 minutes, followed by approximately 15 minutes of results exploration. In addition, this query returned four more features (m/z 518.3235 retention time 203.635 sec, m/z 552.3299 retention time 172.307 sec, m/z 600.403 retention time 224.992 sec, and m/z 768.5895 retention time 366.716 sec). Using LIPIDMAPS and based on precursor mass, we annotate m/z 518.3235 as LPC 18:3, m/z 552.3299 as PC 19:0, m/z 600.403 as LPC 24:4, LPC O-24:5;O or PC O-24:4, and m/z 768.5895 as PC O-36:4. These features had been missed in our prior analyses because they were singleton network nodes and had not returned a library match using our prior networking parameters.</p>
+<p>TODO: Insert Figure</p>
+<h2 id="metabolism-of-antibiotic-trimethoprim-by-burkholderia-cenocepacia">Metabolism of Antibiotic Trimethoprim by Burkholderia cenocepacia<a class="headerlink" href="#metabolism-of-antibiotic-trimethoprim-by-burkholderia-cenocepacia" title="Permanent link">&para;</a></h2>
+<p><strong>Author/s:</strong> Neha Garg and Andrew McAvoy</p>
+<h3 id="massql-query_4">MassQL Query<a class="headerlink" href="#massql-query_4" title="Permanent link">&para;</a></h3>
+<p>QUERY scaninfo(MS2DATA) WHERE 
+MS2PROD=291.1458 AND MS2PROD=123.0665</p>
+<h3 id="massql-translation_4">MassQL Translation<a class="headerlink" href="#massql-translation_4" title="Permanent link">&para;</a></h3>
+<p>Returning the scan information on MS2.<br />
+The following conditions are applied to find scans in the mass spec data:</p>
+<ul>
+<li>Finding MS2 peak at m/z 291.1458.</li>
+<li>Finding MS2 peak at m/z 123.0665.</li>
+</ul>
+<h3 id="massql-query-link_3">MassQL Query Link<a class="headerlink" href="#massql-query-link_3" title="Permanent link">&para;</a></h3>
+<p><a href="https://proteomics2.ucsd.edu/ProteoSAFe/result.jsp?task=db21c5c316034b09a74668b53828b39b&amp;view=query_results">MassQL Query Link</a></p>
+<h3 id="additional-data-analysis_4">Additional Data Analysis<a class="headerlink" href="#additional-data-analysis_4" title="Permanent link">&para;</a></h3>
+<h4 id="gnps-feature-based-molecular-networking_1">GNPS Feature-based Molecular Networking<a class="headerlink" href="#gnps-feature-based-molecular-networking_1" title="Permanent link">&para;</a></h4>
+<p><a href="https://gnps.ucsd.edu/ProteoSAFe/status.jsp?task=451754c383de461e9e4abdf6eb3199d2">GNPS Feature-based Molecular Networking</a></p>
+<h4 id="data-availability_3">Data Availability<a class="headerlink" href="#data-availability_3" title="Permanent link">&para;</a></h4>
+<p>MSV000084945</p>
+<h3 id="background_4">Background<a class="headerlink" href="#background_4" title="Permanent link">&para;</a></h3>
+<p>Trimethoprim, when combined with sulfamethoxazole, is a bactericidal antibiotic used by clinicians to treat bacterial infections, such as those caused by <em>Burkholderia cepacia</em> complex (Bcc) bacteria in cystic fibrosis patients. <em>Burkholderia</em> spp. are well known for their ability to metabolize xenobiotic compounds. In a previous untargeted metabolomics study, we cultured Bcc bacteria in the presence and absence of trimethoprim. In MS/MS, trimethoprim features a prominent peak with m/z 123.0665 generated by cleavage of a carbon-carbon bond of the methylene connecting the two rings, yielding the 2,4-diaminopyrimidin-5-yl-methylium fragment ion (SI Figure 1.4 - 1). With MassQL, we were able to identify spectra containing fragment masses corresponding to trimethoprim (m/z 291.1452) and the 2,4-diaminopyrimidin-5-yl-methylium fragment, allowing us to mine our dataset for metabolomic features that correspond to novel biotransformation products of trimethoprim.</p>
+<h3 id="results_3">Results<a class="headerlink" href="#results_3" title="Permanent link">&para;</a></h3>
+<p>This MassQL query returned a list of metabolites which display an MS2 fragmentation pattern indicative of a trimethoprim substructure, facilitating the identification of trimethoprim biotransformation products. Manual inspection revealed that 33 out of the 47 candidate features truly contained a trimethoprim substructure, which can undoubtedly be improved by optimizing the query. Previously, we relied on MS2LDA to find compounds containing a trimethoprim substructure, which involves extracting Mass2Motifs from data, manually inspecting the Mass2Motifs found in trimethoprim, and searching for all other molecules which contain relevant Mass2Motifs. MassQL provided additional flexibility to refine the Mass2Motif pattern. Notably, the MassQL query correctly identified a molecule with m/z 549.129 as containing a trimethoprim substructure, which was not recognized by MS2LDA analysis. Although manual inspection of raw data should always be performed to verify in silico predictions, MassQL has the potential to greatly streamline metabolomic analysis in a manner that can be creatively applied based on the unique analysis needs of a particular dataset.</p>
+<p>TODO: Insert Figure</p>
+<h2 id="investigating-cannabidiol-degradation-products-using-massql">Investigating Cannabidiol Degradation Products using MassQL<a class="headerlink" href="#investigating-cannabidiol-degradation-products-using-massql" title="Permanent link">&para;</a></h2>
+<p><strong>Author/s:</strong> Matthew J. Bertin and Riley D. Kirk</p>
+<h3 id="massql-query_5">MassQL Query<a class="headerlink" href="#massql-query_5" title="Permanent link">&para;</a></h3>
+<p>QUERY scaninfo(MS2DATA) WHERE 
+MS2PROD=259.5:TOLERANCEMZ=0.5</p>
+<h3 id="massql-translation_5">MassQL Translation<a class="headerlink" href="#massql-translation_5" title="Permanent link">&para;</a></h3>
+<p>Returning the scan information on MS2.<br />
+The following conditions are applied to find scans in the mass spec data:</p>
+<ul>
+<li>Finding MS2 peak at m/z 259.5 with a 0.5 m/z tolerance.</li>
+</ul>
+<h3 id="massql-query-links">MassQL Query Links<a class="headerlink" href="#massql-query-links" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Day 1:</strong> <a href="https://proteomics2.ucsd.edu/ProteoSAFe/result.jsp?task=d9c7673620b54e58a15f967334a5024d&amp;view=query_results">MassQL Query Link (day 1)</a></li>
+<li><strong>Day 4:</strong> <a href="https://proteomics2.ucsd.edu/ProteoSAFe/result.jsp?task=c80fcbe42f7048678c66ca379487f53a&amp;view=query_results">MassQL Query Link (day 4)</a></li>
+</ul>
+<h3 id="additional-data-analysis_5">Additional Data Analysis<a class="headerlink" href="#additional-data-analysis_5" title="Permanent link">&para;</a></h3>
+<h4 id="gnps-molecular-networking_2">GNPS Molecular Networking<a class="headerlink" href="#gnps-molecular-networking_2" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Day 1:</strong> <a href="https://gnps.ucsd.edu/ProteoSAFe/status.jsp?task=432b9dff5ef143b69b719ef42a41d9d2">GNPS Molecular Networking (day 1)</a></li>
+<li><strong>Day 4:</strong> <a href="https://gnps.ucsd.edu/ProteoSAFe/status.jsp?task=bd728f3e31ac447384118dc3003cba01">GNPS Molecular Networking (day 4)</a></li>
+</ul>
+<h3 id="background_5">Background<a class="headerlink" href="#background_5" title="Permanent link">&para;</a></h3>
+<p>Cannabidiol (CBD) is a major phytocannabinoid found in Cannabis plants. The use of CBD continues to gain interest in the pharmaceutical, nutraceutical, and even the cosmeceutical industries. Detection and annotation of cannabidiol degradation products remain important for understanding the stability and quality of the now numerous CBD products available to the public. This understanding is especially critical with recent research demonstrating the biological activity (inhibition of topoisomerase II⍺ and β) of an oxidized cannabidiol quinone (CBDQ). </p>
+<h3 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">&para;</a></h3>
+<p>We analyzed purified CBD at two time periods (t = 0 d and t = 4 d) following exposure to natural light. The clear solution on day 0 began to take on a pale yellow color by day 4. LC-MS/MS data were acquired in data-dependent mode using a Thermo Scientific LTQ XL. We utilized mass query language to identify product ion m/z 259, a prominent fragment ion from cannabinoid precursors. We subsequently subjected each query analysis to molecular networking and examined the changes in chemical space over time.</p>
+<h3 id="results_4">Results<a class="headerlink" href="#results_4" title="Permanent link">&para;</a></h3>
+<p>At day 0, eight unique precursor m/z values were identified with the m/z 259 product ion. By day 4, over fifty unique precursor m/z values were identified, including a putative identification of CBD quinone (m/z 329), and many other likely degradation products. This approach shows an effective means to mine mass spectrometry data to identify potential CBD degradation molecules for quality control as more and more consumers utilize these products.</p>
+<p>TODO: INsert figure</p>
+<h2 id="finding-drug-metabolites-from-public-fecal-datasets">Finding Drug Metabolites from Public Fecal Datasets<a class="headerlink" href="#finding-drug-metabolites-from-public-fecal-datasets" title="Permanent link">&para;</a></h2>
+<p><strong>Author/s:</strong> Kyo Bin Kang</p>
+<h3 id="massql-query_6">MassQL Query<a class="headerlink" href="#massql-query_6" title="Permanent link">&para;</a></h3>
+<p>QUERY scaninfo(MS2DATA) WHERE 
+MS2PROD=311.1508:TOLERANCEMZ=0.0025:INTENSITYPERCENT&gt;5</p>
+<h3 id="massql-translation_6">MassQL Translation<a class="headerlink" href="#massql-translation_6" title="Permanent link">&para;</a></h3>
+<p>Returning the scan information on MS2.<br />
+The following conditions are applied to find scans in the mass spec data:</p>
+<ul>
+<li>Finding MS2 peak at m/z 311.1508 with a 0.0025 m/z tolerance and a minimum percent intensity relative to base peak of 5.0%.</li>
+</ul>
+<h3 id="massql-query-link_4">MassQL Query Link<a class="headerlink" href="#massql-query-link_4" title="Permanent link">&para;</a></h3>
+<p><a href="https://proteomics2.ucsd.edu/ProteoSAFe/status.jsp?task=45b72be5b8e54d0d92959ec57f4f4558">MassQL Query Link</a></p>
+<h3 id="additional-data-analysis_6">Additional Data Analysis<a class="headerlink" href="#additional-data-analysis_6" title="Permanent link">&para;</a></h3>
+<p>N/A</p>
+<h3 id="data-availability_4">Data Availability<a class="headerlink" href="#data-availability_4" title="Permanent link">&para;</a></h3>
+<p>MSV000080673 and MSV000082221</p>
+<h3 id="background_6">Background<a class="headerlink" href="#background_6" title="Permanent link">&para;</a></h3>
+<p>In a previous study, we identified 68 putative metabolites of sildenafil by applying molecular networking analysis on LC-MS/MS data of in vitro microsomal biotransformation experiments. The MASST search of these spectra revealed that at least four public datasets (all the data were human fecal extracts) contained intact sildenafil or its major metabolite of m/z 449.1971. However, other metabolites were not found in the MASST analysis. Further investigation revealed that the matched data actually contained other metabolites, but they were not detected due to the low cosine similarity, which was mainly caused by significantly different ion intensities of fragment ions.</p>
+<h3 id="methods_1">Methods<a class="headerlink" href="#methods_1" title="Permanent link">&para;</a></h3>
+<p>We queried a common fragment of sildenafil metabolites, m/z 311.1508, and this query revealed the occurrence of other sildenafil metabolites in four matched datasets. We found 150 MS/MS scans containing a fragment ion of m/z 311.1508 from four public fecal extract data files. Some of these were identified as sildenafil metabolites in our previous study by comparing their spectra with the experimental spectra acquired in our in vitro work.</p>
+<h3 id="results_5">Results<a class="headerlink" href="#results_5" title="Permanent link">&para;</a></h3>
+<p>In the previous study, we discussed that these metabolites were not found in the MASST search because they showed low cosine similarity to the experimental spectra due to the different relative intensities between fragments. By visualizing extracted ion chromatograms (EICs) of identified metabolites and manually comparing m/z values of major fragment ions, we successfully found drug metabolites with the characteristic fragment ion using MassQL. This demonstrates that we can find drug metabolites from public datasets more easily even when their MS/MS spectra show low cosine similarity to our reference spectra.</p>
+<p>TODO: Insert figure</p>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">July 3, 2024 05:01:52</span>
+      
+    
+  </small>
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.220ee61c.min.js"></script>
+      
+    
+  </body>
+</html>

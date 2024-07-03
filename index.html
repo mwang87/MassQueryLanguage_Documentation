@@ -1,6 +1,4 @@
 
-
-
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
@@ -9,11 +7,15 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
       
+      
         <link rel="canonical" href="https://mwang87.github.io/MassQueryLanguage_Documentation/">
       
       
-      <link rel="shortcut icon" href="assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.2.0">
+      
+        <link rel="next" href="patterns/">
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.19">
     
     
       
@@ -21,27 +23,27 @@
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.18ac144a.min.css">
+      <link rel="stylesheet" href="assets/stylesheets/main.eebd395e.min.css">
       
       
-    
-    
-    
-      
-        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
-        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
-      
-    
+
     
     
     
       
         
-<link rel="preconnect dns-prefetch" href="https://www.google-analytics.com">
-<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-8412213-5","ccms-ucsd.github.io"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}),document.addEventListener("DOMContentSwitch",function(){ga("send","pageview")})</script>
-<script async src="https://www.google-analytics.com/analytics.js"></script>
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
+    
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
     
     
   </head>
@@ -49,6 +51,10 @@
   
     <body dir="ltr">
   
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
@@ -64,48 +70,60 @@
       
     </div>
     
-      <header class="md-header" data-md-component="header">
-  <nav class="md-header-nav md-grid" aria-label="Header">
-    <a href="https://mwang87.github.io/MassQueryLanguage_Documentation/" title="MassQL Documentation" class="md-header-nav__button md-logo" aria-label="MassQL Documentation">
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="MassQL Documentation" class="md-header__button md-logo" aria-label="MassQL Documentation" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
 
     </a>
-    <label class="md-header-nav__button md-icon" for="__drawer">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
     </label>
-    <div class="md-header-nav__title" data-md-component="header-title">
-      
-        <div class="md-header-nav__ellipsis">
-          <span class="md-header-nav__topic md-ellipsis">
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
             MassQL Documentation
           </span>
-          <span class="md-header-nav__topic md-ellipsis">
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
             
               MassQL Introduction
             
           </span>
         </div>
-      
+      </div>
     </div>
     
-      <label class="md-header-nav__button md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
       </label>
-      
-<div class="md-search" data-md-component="search" role="dialog">
+      <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
       </label>
-      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
-      </button>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
@@ -113,7 +131,7 @@
           <div class="md-search-result__meta">
             Initializing search
           </div>
-          <ol class="md-search-result__list"></ol>
+          <ol class="md-search-result__list" role="presentation"></ol>
         </div>
       </div>
     </div>
@@ -121,12 +139,11 @@
 </div>
     
     
-      <div class="md-header-nav__source">
-        
-<a href="https://github.com/mwang87/MassQueryLanguage_Documentation/" title="Go to repository" class="md-source">
+      <div class="md-header__source">
+        <a href="https://github.com/mwang87/MassQueryLanguage_Documentation" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     mwang87/MassQueryLanguage_Documentation
@@ -135,39 +152,43 @@
       </div>
     
   </nav>
+  
 </header>
     
     <div class="md-container" data-md-component="container">
       
+      
         
-      
-      
+          
         
       
       <main class="md-main" data-md-component="main">
         <div class="md-main__inner md-grid">
           
             
-              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
-                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="https://mwang87.github.io/MassQueryLanguage_Documentation/" title="MassQL Documentation" class="md-nav__button md-logo" aria-label="MassQL Documentation">
+    <a href="." title="MassQL Documentation" class="md-nav__button md-logo" aria-label="MassQL Documentation" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
 
     </a>
     MassQL Documentation
   </label>
   
     <div class="md-nav__source">
-      
-<a href="https://github.com/mwang87/MassQueryLanguage_Documentation/" title="Go to repository" class="md-source">
+      <a href="https://github.com/mwang87/MassQueryLanguage_Documentation" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     mwang87/MassQueryLanguage_Documentation
@@ -182,36 +203,37 @@
       
 
   
-
-
-  <li class="md-nav__item md-nav__item--active">
+  
     
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        MassQL Introduction
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
-        </span>
-      </label>
-    
-    <a href="." title="MassQL Introduction" class="md-nav__link md-nav__link--active">
-      MassQL Introduction
-    </a>
-    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
       
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          MassQL Introduction
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        MassQL Introduction
+      </a>
+      
+        
+
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
+  
     <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-      </span>
+      <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
-    <ul class="md-nav__list" data-md-scrollfix>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
   <a href="#about-mass-spec-query-language" class="md-nav__link">
@@ -599,44 +621,69 @@
     </ul>
   
 </nav>
-    
-  </li>
+      
+    </li>
+  
 
     
       
       
       
 
-
-  <li class="md-nav__item">
-    <a href="patterns/" title="MassQL Patterns" class="md-nav__link">
-      MassQL Patterns
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="gnps/" title="MassQL GNPS Workflow" class="md-nav__link">
-      MassQL GNPS Workflow
-    </a>
-  </li>
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="patterns/" class="md-nav__link">
+        MassQL Patterns
+      </a>
+    </li>
+  
 
     
       
       
       
 
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="gnps/" class="md-nav__link">
+        MassQL GNPS Workflow
+      </a>
+    </li>
+  
 
-  <li class="md-nav__item">
-    <a href="visualizer/" title="MassQL Query Visualizer" class="md-nav__link">
-      MassQL Query Visualizer
-    </a>
-  </li>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="visualizer/" class="md-nav__link">
+        MassQL Query Visualizer
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="user_cases.md" class="md-nav__link">
+        MassQL Use Cases
+      </a>
+    </li>
+  
 
     
   </ul>
@@ -646,21 +693,22 @@
               </div>
             
             
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
+
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
+  
     <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-      </span>
+      <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
-    <ul class="md-nav__list" data-md-scrollfix>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
   <a href="#about-mass-spec-query-language" class="md-nav__link">
@@ -1053,21 +1101,19 @@
               </div>
             
           
-          <div class="md-content">
-            <article class="md-content__inner md-typeset">
-              
-                
-                  <a href="https://github.com/mwang87/MassQueryLanguage_Documentation/edit/main/docs/index.md" title="Edit this page" class="md-content__button md-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
-                  </a>
-                
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
                 
                   
-                
-                
-                  <h1>MassQL Introduction</h1>
-                
-                <p><img alt="" src="img/logo.png" /></p>
+
+  
+  
+
+
+  <h1>MassQL Introduction</h1>
+
+<p><img alt="" src="img/logo.png" /></p>
 <h2 id="about-mass-spec-query-language">About Mass Spec Query Language<a class="headerlink" href="#about-mass-spec-query-language" title="Permanent link">&para;</a></h2>
 <p>The Mass Spec Query Langauge (MassQL) is a domain specific language meant to be a succinct way to 
 express a query in a mass spectrometry centric fashion. It is inspired by SQL, 
@@ -1095,7 +1141,6 @@ FILTER
 AND
 &lt;Filter&gt;
 </code></pre></div>
-
 <h3 id="type-of-data">Type of Data<a class="headerlink" href="#type-of-data" title="Permanent link">&para;</a></h3>
 <p>This determines the type of data you want to get. At its most fundamental level, its the peaks
 for either </p>
@@ -1148,7 +1193,6 @@ which are specific conditions and the associated qualifiers. You may further com
 <p>We have a special keyword to interact with mobility data. Specifically, the syntax enables you to set min and max bounds for the mobility</p>
 <div class="highlight"><pre><span></span><code>MOBILITY=range(min=1, max=2)
 </code></pre></div>
-
 <p>The units here are whatever your mass spectrometer reports and are not converted to collision cross section (CCS). </p>
 <div class="admonition note">
 <p class="admonition-title">Fun with m/z variables and Mobility</p>
@@ -1167,7 +1211,6 @@ This represents approximately this parallelogram region. </p>
 <div class="highlight"><pre><span></span><code>TOLERANCEMZ=0.1
 TOLERANCEPPM=50
 </code></pre></div>
-
 <div class="admonition note">
 <p class="admonition-title">Default Values</p>
 <p>The default tolerance when no qualifier is provided is 0.1 Da.</p>
@@ -1178,7 +1221,6 @@ TOLERANCEPPM=50
 INTENSITYPERCENT=10
 INTENSITYTICPERCENT=10
 </code></pre></div>
-
 <p>INTENSITYVALUE - This indicates a minimum intensity value in terms of arbitrary units.
 INTENSITYPERCENT - This indicates a minimum percent of maximum peak in the spectrum.
 INTENSITYTICPERCENT - This indicates a minimum percent of total TIC in the spectra. </p>
@@ -1193,7 +1235,6 @@ INTENSITYMATCH=Y
 INTENSITYMATCH=Y*2
 INTENSITYMATCHPERCENT=10
 </code></pre></div>
-
 <div class="admonition info">
 <p class="admonition-title">Intensity Matching Between Peaks</p>
 <p>This is actually complicated, but you'll end up with one peak per variable that is the reference
@@ -1208,11 +1249,9 @@ MS1MZ=X+2:INTENSITYMATCH=Y*2:INTENSITYMATCHPERCENT=1 # The Y*2 denotes that it m
 <p>As mentioned above, the value of certain conditions can be numbers (more precisely floats). However, its sometimes in convenient to have to actually calculate out the m/z for an MS2PROD condition and also the derivation is obfuscated if its just a single number. You can simply list it out as a numerical expression</p>
 <div class="highlight"><pre><span></span><code>MS2PROD=100+14
 </code></pre></div>
-
 <p>and this will get calculated to mean</p>
 <div class="highlight"><pre><span></span><code>MS2PROD=114
 </code></pre></div>
-
 <p>You can even do more advanced things that are native to chemistry/biochemistry without having to look up numbers, and they are listed below. </p>
 <div class="admonition note">
 <p class="admonition-title">MS2MZ and MS2PROD synonyms</p>
@@ -1223,12 +1262,10 @@ MS1MZ=X+2:INTENSITYMATCH=Y*2:INTENSITYMATCHPERCENT=1 # The Y*2 denotes that it m
 <p>For example:</p>
 <div class="highlight"><pre><span></span><code>MS2PROD=ANY:MASSDEFECT=massdefect(min=0.1, max=0.2)
 </code></pre></div>
-
 <h4 id="variables">Variables<a class="headerlink" href="#variables" title="Permanent link">&para;</a></h4>
 <p>In cases where you do not know the mass of the peaks for a specific pattern, but you know the pattern of peaks relative to each other, e.g. isotopic patterns, you can use the variable X in place. For example:</p>
 <div class="highlight"><pre><span></span><code>QUERY scaninfo(MS2DATA) WHERE MS2PROD=X and MS2NL=X+16
 </code></pre></div>
-
 <div class="admonition note">
 <p class="admonition-title">Limiting Range of X</p>
 <p>If you want to limit the range you can set another condition, <code>X=range(min=100, max=500)</code></p>
@@ -1241,43 +1278,35 @@ MS1MZ=X+2:INTENSITYMATCH=Y*2:INTENSITYMATCHPERCENT=1 # The Y*2 denotes that it m
 <p>To save us all a little bit of time convert lookup of formulas into masses, you can use the syntax:</p>
 <div class="highlight"><pre><span></span><code>MS2PROD=formula(H2O)
 </code></pre></div>
-
 <p>to easily calcualte the mono isotopic mass of H2O. It will substitute as</p>
 <div class="highlight"><pre><span></span><code>MS2PROD=18.01056468403
 </code></pre></div>
-
 <div class="admonition info">
 <p class="admonition-title">Advanced Usage</p>
 <p>If you want to make functions out of formula masses, you totally can, like below</p>
 <div class="highlight"><pre><span></span><code>MS2PROD=100 + formula(CH2)*2
 </code></pre></div>
-
 </div>
 <h4 id="amino-acid-masses">Amino Acid Masses<a class="headerlink" href="#amino-acid-masses" title="Permanent link">&para;</a></h4>
 <p>To calculate amino acid masses, you can use the following syntax</p>
 <div class="highlight"><pre><span></span><code>MS2PROD=100 + aminoaciddelta(G)
 </code></pre></div>
-
 <p>which will calculate out to </p>
 <div class="highlight"><pre><span></span><code>MS2PROD=157.02146372057
 </code></pre></div>
-
 <div class="admonition note">
 <p class="admonition-title">Multiple Amino Acids</p>
 <p>If you want to use multiple amino acids, no problem:</p>
 <div class="highlight"><pre><span></span><code>MS2PROD=aminoaciddelta(GA)
 </code></pre></div>
-
 </div>
 <h4 id="peptide-masses">Peptide Masses<a class="headerlink" href="#peptide-masses" title="Permanent link">&para;</a></h4>
 <p>If you're in the proteomics camp, you can automatically calculate peptide fragementation. </p>
 <div class="highlight"><pre><span></span><code>MS2PROD=peptide(G, charge=1, ion=y)
 </code></pre></div>
-
 <p>will yield</p>
 <div class="highlight"><pre><span></span><code>MS2PROD=76.03930487103999
 </code></pre></div>
-
 <h3 id="filters">Filters<a class="headerlink" href="#filters" title="Permanent link">&para;</a></h3>
 <p>Filters are like conditional but we don't elimate scans based on the condition. Rather, we simply filter out peaks within the spectra. </p>
 <p>This is useful for things like SRM or SIM/XIC. </p>
@@ -1286,8 +1315,10 @@ MS1MZ=X+2:INTENSITYMATCH=Y*2:INTENSITYMATCHPERCENT=1 # The Y*2 denotes that it m
 <p>If you are looking for two peaks but either of them could be present, you can use the following syntax</p>
 <div class="highlight"><pre><span></span><code>MS2PROD=(100 OR 104)
 </code></pre></div>
-
-<p>You can use with variables as well. </p>
+<p>You can use with variables as well.</p>
+<p>With OR operations, you can specify multiple masses to look for. To give you more flexibility, you can require a minimum and maximum number of those masses to appear in a single mass spectrum. You can use the CARDINALITY qualifier to denote how many of the optional masses should appear. For example if 2 out of the 3 masses should appear:</p>
+<div class="highlight"><pre><span></span><code>MS2PROD=(100 OR 104 OR 106):CARDINALITY=range(min=2, max=2)
+</code></pre></div>
 <h2 id="massql-patterns">MassQL Patterns<a class="headerlink" href="#massql-patterns" title="Permanent link">&para;</a></h2>
 <p>If you're interested in doing some more advanced queries in MassQL, we have a dedicated patterns page to show you 
 ways we've approached some interesting applications. By no means is it comprehensive, but we hope it helps. Check it out <a href="patterns/">here</a>.</p>
@@ -1296,19 +1327,16 @@ ways we've approached some interesting applications. By no means is it comprehen
 <p>MS1 XIC, m/z = 100</p>
 <div class="highlight"><pre><span></span><code>QUERY scansum(MS1DATA) FILTER MS1MZ=100:TOLERANCEMZ=0.1
 </code></pre></div>
-
 <h3 id="ms2-with-sugar-loss-neutral-loss-scan">MS2 With Sugar Loss - Neutral Loss Scan<a class="headerlink" href="#ms2-with-sugar-loss-neutral-loss-scan" title="Permanent link">&para;</a></h3>
 <p>Neutral Loss, 163 Da</p>
 <div class="highlight"><pre><span></span><code>QUERY scaninfo(MS2DATA) WHERE MS2NL=163
 </code></pre></div>
-
 <h3 id="brominated-compounds">Brominated Compounds<a class="headerlink" href="#brominated-compounds" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code>QUERY scaninfo(MS2DATA) WHERE 
 MS1MZ=X:INTENSITYMATCH=Y:INTENSITYMATCHREFERENCE 
 AND MS1MZ=X+2:INTENSITYMATCH=Y:INTENSITYMATCHPERCENT=5
 AND MS2PREC=X
 </code></pre></div>
-
 <h3 id="ms2-with-distinct-fragments-precursor-ion-scan">MS2 with distinct fragment(s) - Precursor Ion Scan<a class="headerlink" href="#ms2-with-distinct-fragments-precursor-ion-scan" title="Permanent link">&para;</a></h3>
 <p>One Product Ion, m/z = 660.2
 <div class="highlight"><pre><span></span><code>QUERY scaninfo(MS2DATA) WHERE MS2PROD=660.2:TOLERANCEMZ=0.1
@@ -1347,89 +1375,63 @@ to collaborate on it. </p>
 <p>We have built out a web API for people to use, especially for parsing. </p>
 <div class="highlight"><pre><span></span><code>https://msql.ucsd.edu/parse?query=QUERY%20MS2DATA%20WHERE%20MS1MZ=100
 </code></pre></div>
-
 <p>Simply put in the query as a url encoded parameter and a JSON representation of the parse is returned. </p>
 <h3 id="interactive-web-sandbox">Interactive Web Sandbox<a class="headerlink" href="#interactive-web-sandbox" title="Permanent link">&para;</a></h3>
 <p>Checkout the interactive sandbox <a href="https://msql.ucsd.edu/">here</a>. </p>
 <h2 id="debugging-your-query">Debugging Your Query<a class="headerlink" href="#debugging-your-query" title="Permanent link">&para;</a></h2>
 <p>I would recommend you check out the interactive sandbox listed above. One of the features here is we try to translate your MassQL query into a visualization and into English. Generally issues with queries run into problems with of misunderstanding what each condition and qualifier mean or setting your requirements a bit too strict. Both the visualization and translation to English helps with that. </p>
-                
-                  
-                    
 
-<hr>
-<div class="md-source-date">
+  <hr>
+<div class="md-source-file">
   <small>
     
-      Last update: May 24, 2022 15:50:28
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">June 23, 2022 21:43:13</span>
+      
     
   </small>
 </div>
-                  
-                
-              
-              
-                
 
 
-              
-            </article>
-          </div>
+
+
+
+                
+              </article>
+            </div>
+          
+          
         </div>
+        
       </main>
       
-        
-<footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
-        
-        
-          <a href="patterns/" title="MassQL Patterns" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                MassQL Patterns
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
+        <footer class="md-footer">
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
-      <div class="md-footer-copyright">
-        
-        Made with
-        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-          Material for MkDocs
-        </a>
-      </div>
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
       
     </div>
   </div>
 </footer>
       
     </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
     
-      <script src="assets/javascripts/vendor.d710d30a.min.js"></script>
-      <script src="assets/javascripts/bundle.5f27aba8.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
-      
-      <script>
-        app = initialize({
-          base: ".",
-          features: [],
-          search: Object.assign({
-            worker: "assets/javascripts/worker/search.27c6a5e6.min.js"
-          }, typeof search !== "undefined" && search)
-        })
-      </script>
+    <script id="__config" type="application/json">{"base": ".", "features": [], "search": "assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.220ee61c.min.js"></script>
       
     
   </body>
