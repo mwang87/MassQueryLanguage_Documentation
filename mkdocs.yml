@@ -9,6 +9,7 @@ nav:
     - MassQL Patterns: patterns.md
     - MassQL GNPS Workflow: gnps.md
     - MassQL Query Visualizer: visualizer.md
+    - MassQL Use Cases: user_cases.md
 theme:
     name: material
 
