@@ -11,13 +11,15 @@
         <link rel="canonical" href="https://mwang87.github.io/MassQueryLanguage_Documentation/usecases/">
       
       
+        <link rel="prev" href="../visualizer/">
+      
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.19">
     
     
       
-        <title>Usecases - MassQL Documentation</title>
+        <title>MassQL Use Cases - MassQL Documentation</title>
       
     
     
@@ -94,7 +96,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Usecases
+              MassQL Use Cases
             
           </span>
         </div>
@@ -262,11 +264,560 @@
 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../user_cases.md" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          MassQL Use Cases
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         MassQL Use Cases
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#massql-query-for-organophosphate-compounds-in-the-environment" class="md-nav__link">
+    MassQL Query for Organophosphate Compounds in the Environment
+  </a>
+  
+    <nav class="md-nav" aria-label="MassQL Query for Organophosphate Compounds in the Environment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#massql-query" class="md-nav__link">
+    MassQL Query
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#massql-translation" class="md-nav__link">
+    MassQL Translation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#massql-query-link" class="md-nav__link">
+    MassQL Query Link
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-data-analysis" class="md-nav__link">
+    Additional Data Analysis
+  </a>
+  
+    <nav class="md-nav" aria-label="Additional Data Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gnps-msms-library-search" class="md-nav__link">
+    GNPS MS/MS Library Search
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-availability" class="md-nav__link">
+    Data Availability
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#background" class="md-nav__link">
+    Background
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#results" class="md-nav__link">
+    Results
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#massql-query-for-organophosphate-compounds-in-the-environment-at-data-repository-scale" class="md-nav__link">
+    MassQL Query for Organophosphate Compounds in the Environment at Data Repository Scale
+  </a>
+  
+    <nav class="md-nav" aria-label="MassQL Query for Organophosphate Compounds in the Environment at Data Repository Scale">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#massql-query_1" class="md-nav__link">
+    MassQL Query
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#massql-translation_1" class="md-nav__link">
+    MassQL Translation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#massql-query-link-repository-scale" class="md-nav__link">
+    MassQL Query Link (repository-scale)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-data-analysis_1" class="md-nav__link">
+    Additional Data Analysis
+  </a>
+  
+    <nav class="md-nav" aria-label="Additional Data Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#falcon-cluster-eps-03" class="md-nav__link">
+    Falcon Cluster, EPS = 0.3
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gnps-molecular-networking" class="md-nav__link">
+    GNPS Molecular Networking
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-availability_1" class="md-nav__link">
+    Data Availability
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#background_1" class="md-nav__link">
+    Background
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#results_1" class="md-nav__link">
+    Results
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#detection-of-fusaricidin-depsipeptides-in-microbial-extracts" class="md-nav__link">
+    Detection of Fusaricidin Depsipeptides in Microbial Extracts
+  </a>
+  
+    <nav class="md-nav" aria-label="Detection of Fusaricidin Depsipeptides in Microbial Extracts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#massql-query_2" class="md-nav__link">
+    MassQL Query
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#massql-translation_2" class="md-nav__link">
+    MassQL Translation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#massql-query-link_1" class="md-nav__link">
+    MassQL Query Link
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#massql-query-link-large-scale" class="md-nav__link">
+    MassQL Query Link (large scale)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-data-analysis_2" class="md-nav__link">
+    Additional Data Analysis
+  </a>
+  
+    <nav class="md-nav" aria-label="Additional Data Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gnps-molecular-networking_1" class="md-nav__link">
+    GNPS Molecular Networking
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#background_2" class="md-nav__link">
+    Background
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#impact-of-leishmania-major-infection-on-glycerophosphocholine-lipids" class="md-nav__link">
+    Impact of Leishmania major Infection on Glycerophosphocholine Lipids
+  </a>
+  
+    <nav class="md-nav" aria-label="Impact of Leishmania major Infection on Glycerophosphocholine Lipids">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#massql-query_3" class="md-nav__link">
+    MassQL Query
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#massql-translation_3" class="md-nav__link">
+    MassQL Translation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#massql-query-link_2" class="md-nav__link">
+    MassQL Query Link
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-data-analysis_3" class="md-nav__link">
+    Additional Data Analysis
+  </a>
+  
+    <nav class="md-nav" aria-label="Additional Data Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gnps-feature-based-molecular-networking" class="md-nav__link">
+    GNPS Feature-based Molecular Networking
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-availability_2" class="md-nav__link">
+    Data Availability
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#background_3" class="md-nav__link">
+    Background
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#results_2" class="md-nav__link">
+    Results
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metabolism-of-antibiotic-trimethoprim-by-burkholderia-cenocepacia" class="md-nav__link">
+    Metabolism of Antibiotic Trimethoprim by Burkholderia cenocepacia
+  </a>
+  
+    <nav class="md-nav" aria-label="Metabolism of Antibiotic Trimethoprim by Burkholderia cenocepacia">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#massql-query_4" class="md-nav__link">
+    MassQL Query
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#massql-translation_4" class="md-nav__link">
+    MassQL Translation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#massql-query-link_3" class="md-nav__link">
+    MassQL Query Link
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-data-analysis_4" class="md-nav__link">
+    Additional Data Analysis
+  </a>
+  
+    <nav class="md-nav" aria-label="Additional Data Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gnps-feature-based-molecular-networking_1" class="md-nav__link">
+    GNPS Feature-based Molecular Networking
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-availability_3" class="md-nav__link">
+    Data Availability
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#background_4" class="md-nav__link">
+    Background
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#results_3" class="md-nav__link">
+    Results
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#investigating-cannabidiol-degradation-products-using-massql" class="md-nav__link">
+    Investigating Cannabidiol Degradation Products using MassQL
+  </a>
+  
+    <nav class="md-nav" aria-label="Investigating Cannabidiol Degradation Products using MassQL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#massql-query_5" class="md-nav__link">
+    MassQL Query
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#massql-translation_5" class="md-nav__link">
+    MassQL Translation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#massql-query-links" class="md-nav__link">
+    MassQL Query Links
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-data-analysis_5" class="md-nav__link">
+    Additional Data Analysis
+  </a>
+  
+    <nav class="md-nav" aria-label="Additional Data Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gnps-molecular-networking_2" class="md-nav__link">
+    GNPS Molecular Networking
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#background_5" class="md-nav__link">
+    Background
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    Methods
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#results_4" class="md-nav__link">
+    Results
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#finding-drug-metabolites-from-public-fecal-datasets" class="md-nav__link">
+    Finding Drug Metabolites from Public Fecal Datasets
+  </a>
+  
+    <nav class="md-nav" aria-label="Finding Drug Metabolites from Public Fecal Datasets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#massql-query_6" class="md-nav__link">
+    MassQL Query
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#massql-translation_6" class="md-nav__link">
+    MassQL Translation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#massql-query-link_4" class="md-nav__link">
+    MassQL Query Link
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-data-analysis_6" class="md-nav__link">
+    Additional Data Analysis
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-availability_4" class="md-nav__link">
+    Data Availability
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#background_6" class="md-nav__link">
+    Background
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methods_1" class="md-nav__link">
+    Methods
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#results_5" class="md-nav__link">
+    Results
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -832,7 +1383,7 @@
   
 
 
-  <h1>Usecases</h1>
+  <h1>MassQL Use Cases</h1>
 
 <h2 id="massql-query-for-organophosphate-compounds-in-the-environment">MassQL Query for Organophosphate Compounds in the Environment<a class="headerlink" href="#massql-query-for-organophosphate-compounds-in-the-environment" title="Permanent link">&para;</a></h2>
 <p><strong>Author/s:</strong> Nina Zhao</p>
