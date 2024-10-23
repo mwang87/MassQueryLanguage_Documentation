@@ -15,7 +15,7 @@
         <link rel="next" href="patterns/">
       
       <link rel="icon" href="assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.19">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.1.19">
     
     
       
@@ -386,6 +386,13 @@
           <li class="md-nav__item">
   <a href="#intensity-relative-to-other-peaks" class="md-nav__link">
     Intensity Relative to Other Peaks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exclusion-qualifier-not" class="md-nav__link">
+    Exclusion Qualifier (NOT)
   </a>
   
 </li>
@@ -865,6 +872,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#exclusion-qualifier-not" class="md-nav__link">
+    Exclusion Qualifier (NOT)
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1245,6 +1259,10 @@ AND
 MS1MZ=X+2:INTENSITYMATCH=Y*2:INTENSITYMATCHPERCENT=1 # The Y*2 denotes that it must be 2 times the intensity of the first peak
 </code></pre></div></p>
 </div>
+<h4 id="exclusion-qualifier-not">Exclusion Qualifier (NOT)<a class="headerlink" href="#exclusion-qualifier-not" title="Permanent link">&para;</a></h4>
+<p>We have a mechanism to invert the selection of a condition. You can simply add an <code>:EXCLUDED</code> qualifier onto a condition to exclude, and in boolean logic function as a NOT, that specific condition. Here is a more complete example:</p>
+<div class="highlight"><pre><span></span><code>QUERY scaninfo(MS2DATA) WHERE MS2PROD=226.18:TOLERANCEPPM=5:EXCLUDED
+</code></pre></div>
 <h3 id="values-of-conditions-qualifiers">Values of Conditions, Qualifiers<a class="headerlink" href="#values-of-conditions-qualifiers" title="Permanent link">&para;</a></h3>
 <p>As mentioned above, the value of certain conditions can be numbers (more precisely floats). However, its sometimes in convenient to have to actually calculate out the m/z for an MS2PROD condition and also the derivation is obfuscated if its just a single number. You can simply list it out as a numerical expression</p>
 <div class="highlight"><pre><span></span><code>MS2PROD=100+14
@@ -1386,7 +1404,7 @@ to collaborate on it. </p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">June 23, 2022 21:43:13</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">October 23, 2024 16:39:07</span>
       
     
   </small>
