@@ -181,6 +181,14 @@ INTENSITYMATCHPERCENT=10
     MS1MZ=X+2:INTENSITYMATCH=Y*2:INTENSITYMATCHPERCENT=1 # The Y*2 denotes that it must be 2 times the intensity of the first peak
     ```
 
+#### Exclusion Qualifier (NOT)
+
+We have a mechanism to invert the selection of a condition. You can simply add an ```:EXCLUDED``` qualifier onto a condition to exclude, and in boolean logic function as a NOT, that specific condition. Here is a more complete example:
+
+```
+QUERY scaninfo(MS2DATA) WHERE MS2PROD=226.18:TOLERANCEPPM=5:EXCLUDED
+```
+
 ### Values of Conditions, Qualifiers
 
 As mentioned above, the value of certain conditions can be numbers (more precisely floats). However, its sometimes in convenient to have to actually calculate out the m/z for an MS2PROD condition and also the derivation is obfuscated if its just a single number. You can simply list it out as a numerical expression
